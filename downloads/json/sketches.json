@@ -1,0 +1,1451 @@
+[
+  {
+    "_id": "UMQB5mcKQ",
+    "name": "7.2 Code Example 1.1 copy",
+    "files": [
+      {
+        "name": "root",
+        "content": "",
+        "children": [
+          "6359fdd0eafb6fa4be79682b",
+          "6359fdd0eafb6fa4be79682c",
+          "6359fdd0eafb6fa4be79682d"
+        ],
+        "fileType": "folder",
+        "_id": "6359fdd0eafb6fa4be79682a",
+        "createdAt": "2022-10-27T03:39:44.372Z",
+        "updatedAt": "2022-10-27T03:39:44.372Z",
+        "id": "6359fdd0eafb6fa4be79682a"
+      },
+      {
+        "name": "sketch.js",
+        "content": "let balls = [];\n\nfunction setup() {\n  createCanvas(400, 400);\n  //generate ball\n    for (let i = 0; i < 3; i++) {\n    balls[i] = new Ball(random(width), random(height));\n  }\n}\n\nfunction draw() {\n  background(50);\n\n  for (let i = 0; i < balls.length; i++) {\n    balls[i].move();\n    balls[i].display();\n    balls[i].bounce();\n\n\n   \n  }\n  fill(255);\n  text(\"add ball(s) by Mouse press\",10,20);\n  text(\"delete ball by press Key 'D'\",10,40);\n}\n\n//AMAZING! if mouse pressed, add a new ball at the location of mouseX, mouseY\nfunction mousePressed() {\n  balls.push(new Ball(mouseX, mouseY));\n}\n\n\nfunction keyPressed() {\n  // if \"D\" or \"d\" is pressed,\n  if (key == \"d\" || key == \"D\") {\n    // and if there is at least one object\n    if (balls.length > 0) {\n      let index = 0; // the first index = the oldest object\n      // remove the oldest object\n      balls.splice(index, 1);\n    }\n  }\n}\n\nclass Ball {\n  //property\n  constructor(x, y) {\n    this.x = x;\n    this.y = y;\n    this.dia = random(10, 30);\n    this.xSpd = random(-2, 2);\n    this.ySpd = random(-2, 2);\n  }\n\n  //how does it move, behaviors\n  move() {\n    this.x += this.xSpd;\n    this.y += this.ySpd;\n  }\n\n  bounce() {\n    if (this.x < 0 || this.x > width) {\n      this.xSpd = this.xSpd * -1;\n    }\n    if (this.y < 0 || this.y > height) {\n      this.ySpd = this.ySpd * -1;\n    }\n  }\n  \n\n\n\n  //how this ball looks like\n  display() {\n    ellipse(this.x, this.y, this.dia, this.dia);\n  }\n}\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "6359fdd0eafb6fa4be79682c",
+        "isSelectedFile": true,
+        "createdAt": "2022-10-27T03:39:44.372Z",
+        "updatedAt": "2022-10-27T03:39:44.372Z",
+        "id": "6359fdd0eafb6fa4be79682c"
+      },
+      {
+        "name": "index.html",
+        "content": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.js\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/addons/p5.sound.min.js\"></script>\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">\n    <meta charset=\"utf-8\" />\n\n  </head>\n  <body>\n    <main>\n    </main>\n    <script src=\"sketch.js\"></script>\n  </body>\n</html>\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "6359fdd0eafb6fa4be79682b",
+        "createdAt": "2022-10-27T03:39:44.372Z",
+        "updatedAt": "2022-10-27T03:39:44.372Z",
+        "id": "6359fdd0eafb6fa4be79682b"
+      },
+      {
+        "name": "style.css",
+        "content": "html, body {\n  margin: 0;\n  padding: 0;\n}\ncanvas {\n  display: block;\n}\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "6359fdd0eafb6fa4be79682d",
+        "createdAt": "2022-10-27T03:39:44.372Z",
+        "updatedAt": "2022-10-27T03:39:44.372Z",
+        "id": "6359fdd0eafb6fa4be79682d"
+      }
+    ],
+    "createdAt": "2022-10-27T03:41:04.980Z",
+    "updatedAt": "2022-10-27T03:41:04.980Z",
+    "id": "UMQB5mcKQ"
+  },
+  {
+    "_id": "2KiNFXJxM",
+    "name": "Ajar spider",
+    "updatedAt": "2022-12-09T16:26:20.052Z",
+    "files": [
+      {
+        "name": "root",
+        "content": "",
+        "children": [
+          "6390ab74b149f94cbceb5e90",
+          "6390ab74b149f94cbceb5e8f",
+          "6390ab74b149f94cbceb5e91"
+        ],
+        "fileType": "folder",
+        "_id": "6390ab74b149f94cbceb5e92",
+        "createdAt": "2022-12-09T16:26:20.052Z",
+        "updatedAt": "2022-12-09T16:26:20.052Z",
+        "isSelectedFile": false,
+        "id": "6390ab74b149f94cbceb5e92"
+      },
+      {
+        "name": "sketch.js",
+        "content": "function setup() {\n  createCanvas(400, 400);\n}\n\nfunction draw() {\n  background(255);\n}\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "6390ab74b149f94cbceb5e8f",
+        "isSelectedFile": true,
+        "createdAt": "2022-12-09T16:26:20.052Z",
+        "updatedAt": "2022-12-09T16:26:20.052Z",
+        "id": "6390ab74b149f94cbceb5e8f"
+      },
+      {
+        "name": "index.html",
+        "content": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/addons/p5.sound.min.js\"></script>\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">\n    <meta charset=\"utf-8\" />\n\n  </head>\n  <body>\n    <main>\n    </main>\n    <script src=\"sketch.js\"></script>\n  </body>\n</html>\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "6390ab74b149f94cbceb5e90",
+        "createdAt": "2022-12-09T16:26:20.052Z",
+        "updatedAt": "2022-12-09T16:26:20.052Z",
+        "isSelectedFile": false,
+        "id": "6390ab74b149f94cbceb5e90"
+      },
+      {
+        "name": "style.css",
+        "content": "html, body {\n  margin: 0;\n  padding: 0;\n}\ncanvas {\n  display: block;\n}\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "6390ab74b149f94cbceb5e91",
+        "createdAt": "2022-12-09T16:26:20.052Z",
+        "updatedAt": "2022-12-09T16:26:20.052Z",
+        "isSelectedFile": false,
+        "id": "6390ab74b149f94cbceb5e91"
+      }
+    ],
+    "createdAt": "2022-12-07T15:05:17.743Z",
+    "id": "2KiNFXJxM"
+  },
+  {
+    "_id": "C8pH3wG2a",
+    "name": "Animation1",
+    "updatedAt": "2022-09-27T04:29:24.116Z",
+    "files": [
+      {
+        "name": "root",
+        "content": "",
+        "children": [
+          "63327871a062a44178370ab5",
+          "63327871a062a44178370ab4",
+          "63327871a062a44178370ab6"
+        ],
+        "fileType": "folder",
+        "_id": "63327871a062a44178370ab7",
+        "createdAt": "2022-09-27T04:29:24.116Z",
+        "updatedAt": "2022-09-27T04:29:24.116Z",
+        "id": "63327871a062a44178370ab7"
+      },
+      {
+        "name": "sketch.js",
+        "content": "let aniEllipse = () => {\n  noStroke();\n  fill(0,75,75)\n  ellipse(50,50,20,30)\n}\n\nfunction setup() {\n  createCanvas(400, 400);\n  colorMode(HSB);\n}\n\nfunction draw() {\n  background(220);\n  aniEllipse();\n}",
+        "children": [],
+        "fileType": "file",
+        "_id": "63327871a062a44178370ab4",
+        "isSelectedFile": true,
+        "createdAt": "2022-09-27T04:29:24.116Z",
+        "updatedAt": "2022-09-27T04:29:24.116Z",
+        "id": "63327871a062a44178370ab4"
+      },
+      {
+        "name": "index.html",
+        "content": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.js\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/addons/p5.sound.min.js\"></script>\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">\n    <meta charset=\"utf-8\" />\n\n  </head>\n  <body>\n    <main>\n    </main>\n    <script src=\"sketch.js\"></script>\n  </body>\n</html>\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "63327871a062a44178370ab5",
+        "createdAt": "2022-09-27T04:29:24.116Z",
+        "updatedAt": "2022-09-27T04:29:24.116Z",
+        "id": "63327871a062a44178370ab5"
+      },
+      {
+        "name": "style.css",
+        "content": "html, body {\n  margin: 0;\n  padding: 0;\n}\ncanvas {\n  display: block;\n}\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "63327871a062a44178370ab6",
+        "createdAt": "2022-09-27T04:29:24.116Z",
+        "updatedAt": "2022-09-27T04:29:24.116Z",
+        "id": "63327871a062a44178370ab6"
+      }
+    ],
+    "createdAt": "2022-09-27T04:13:40.451Z",
+    "id": "C8pH3wG2a"
+  },
+  {
+    "_id": "1xlrjJkZi",
+    "name": "Assignment 1",
+    "updatedAt": "2022-09-22T03:34:54.482Z",
+    "files": [
+      {
+        "name": "root",
+        "content": "",
+        "children": [
+          "63233e885e53283d84c5c08f",
+          "63233e885e53283d84c5c08e",
+          "63233e885e53283d84c5c090"
+        ],
+        "fileType": "folder",
+        "_id": "63233e885e53283d84c5c091",
+        "createdAt": "2022-09-22T03:34:54.482Z",
+        "updatedAt": "2022-09-22T03:34:54.482Z",
+        "isSelectedFile": false,
+        "id": "63233e885e53283d84c5c091"
+      },
+      {
+        "name": "sketch.js",
+        "content": "let currentHue = 0;\nlet hueAdding = true;\nlet isMousePressed = false;\n\nlet iPadShape = (x,y)=>{\n  //iPad BG\n  fill(0);\n  rect(x,y, 200, 170, 15, 15, 15, 15);\n  \n  fill(currentHue,50,75);\n  rect(x+5,y+5, 190, 160, 10, 10, 10, 10);\n  fill(255);\n  textSize(20);\n  let today = new Date();\n  let nowTime = today.getHours() + \":\" + today.getMinutes() + \":\" + today.getSeconds();\n  text(nowTime, x+60, y+74);\n  \n  this.mousePressed = ()=>{\n    isMousePressed = true\n  }\n  this.mouseReleased = ()=>{\n    isMousePressed = false\n  }\n}\n\nlet chargingPad = ()=>{\n  fill(0);\n  ellipse(290,280,75,50);\n}\n\nfunction setup(){\n  createCanvas(400, 400);\n  colorMode(HSB);\n}\n\nfunction draw(){\n  background(220);\n  noStroke()\n  \n  //Desk\n  fill(26,34,57);\n  quad(0,230,290,230,600,height,0,height);\n  \n  \n  //add to hue\n  if(hueAdding == true){\n    currentHue += 5\n  }else{\n    currentHue -= 5\n  }\n  //decide if the hue value is going up or down\n  if(currentHue >= 360){\n    hueAdding = false\n  }\n  if(currentHue <= 0){\n    hueAdding = true\n  }\n  \n  chargingPad();\n  if (isMousePressed){\n    iPadShape(mouseX-50,mouseY-50);\n  }else{\n    iPadShape(50,100);\n  }\n  \n  fill(255);\n  textSize(20);\n  text(\"Try pick up the iPad!\", 105, 386);\n}",
+        "children": [],
+        "fileType": "file",
+        "_id": "63233e885e53283d84c5c08e",
+        "isSelectedFile": true,
+        "createdAt": "2022-09-22T03:34:54.482Z",
+        "updatedAt": "2022-09-22T03:34:54.482Z",
+        "id": "63233e885e53283d84c5c08e"
+      },
+      {
+        "name": "index.html",
+        "content": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.js\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/addons/p5.sound.min.js\"></script>\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">\n    <meta charset=\"utf-8\" />\n\n  </head>\n  <body>\n    <main>\n    </main>\n    <script src=\"sketch.js\"></script>\n  </body>\n</html>\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "63233e885e53283d84c5c08f",
+        "createdAt": "2022-09-22T03:34:54.482Z",
+        "updatedAt": "2022-09-22T03:34:54.482Z",
+        "isSelectedFile": false,
+        "id": "63233e885e53283d84c5c08f"
+      },
+      {
+        "name": "style.css",
+        "content": "html, body {\n  margin: 0;\n  padding: 0;\n}\ncanvas {\n  display: block;\n}\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "63233e885e53283d84c5c090",
+        "createdAt": "2022-09-22T03:34:54.482Z",
+        "updatedAt": "2022-09-22T03:34:54.482Z",
+        "isSelectedFile": false,
+        "id": "63233e885e53283d84c5c090"
+      }
+    ],
+    "createdAt": "2022-09-15T15:38:23.313Z",
+    "id": "1xlrjJkZi"
+  },
+  {
+    "_id": "5x578DiXM",
+    "name": "Atoms",
+    "updatedAt": "2022-10-30T06:42:11.986Z",
+    "files": [
+      {
+        "name": "root",
+        "content": "",
+        "children": [
+          "633515a4db75f60d9b967f23",
+          "633515a4db75f60d9b967f22",
+          "633515a4db75f60d9b967f24"
+        ],
+        "fileType": "folder",
+        "_id": "633515a4db75f60d9b967f25",
+        "createdAt": "2022-10-30T06:42:11.986Z",
+        "updatedAt": "2022-10-30T06:42:11.986Z",
+        "isSelectedFile": false,
+        "id": "633515a4db75f60d9b967f25"
+      },
+      {
+        "name": "sketch.js",
+        "content": "let ang = 0;\nlet randomArr = [];\nlet randomHue = 0;\n\nlet atom = (r1, r2) => {\n  circle(\n    map(sin(ang + r1) , -1, 1, 50, width - 50),\n    map(cos(ang + r2) , -1, 1, 50, height - 50),\n    20\n  );\n};\n\nfunction setup() {\n  createCanvas(400, 400);\n  colorMode(HSB)\n  frameRate(12);\n  for (let i = 0; i < random(10, 25); i++) {\n    tArr = [];\n    for (let i = 0; i < 2; i++) {\n      tArr.push(random(10, 50));\n    }\n    randomArr.push(tArr);\n  }\n  randomHue = random(200, 255);\n}\n\nfunction draw() {\n  background(randomHue, 65, 65);\n  fill((255-randomHue), 78, 78);\n  textSize(133);\n  textStyle(BOLDITALIC);\n  text('atoms', 0, 125 - (sin(ang * 0.5)*10) );\n  noStroke();\n  fill(255);\n  circle(width / 2, height / 2, map(sin(ang * 0.5), -1, 1, 100, 125));\n  randomArr.forEach((a) => {\n    atom(a[0], a[1]);\n  });\n  ang += 0.05;\n}",
+        "children": [],
+        "fileType": "file",
+        "_id": "633515a4db75f60d9b967f22",
+        "isSelectedFile": true,
+        "createdAt": "2022-10-30T06:42:11.986Z",
+        "updatedAt": "2022-10-30T06:42:11.986Z",
+        "id": "633515a4db75f60d9b967f22"
+      },
+      {
+        "name": "index.html",
+        "content": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.js\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/addons/p5.sound.min.js\"></script>\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">\n    <meta charset=\"utf-8\" />\n\n  </head>\n  <body>\n    <main>\n    </main>\n    <script src=\"sketch.js\"></script>\n  </body>\n</html>\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "633515a4db75f60d9b967f23",
+        "createdAt": "2022-10-30T06:42:11.986Z",
+        "updatedAt": "2022-10-30T06:42:11.986Z",
+        "isSelectedFile": false,
+        "id": "633515a4db75f60d9b967f23"
+      },
+      {
+        "name": "style.css",
+        "content": "html, body {\n  margin: 0;\n  padding: 0;\n}\ncanvas {\n  display: block;\n}\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "633515a4db75f60d9b967f24",
+        "createdAt": "2022-10-30T06:42:11.986Z",
+        "updatedAt": "2022-10-30T06:42:11.986Z",
+        "isSelectedFile": false,
+        "id": "633515a4db75f60d9b967f24"
+      }
+    ],
+    "createdAt": "2022-09-29T03:50:29.372Z",
+    "id": "5x578DiXM"
+  },
+  {
+    "_id": "kqWIKgZ9P",
+    "name": "Basic Drawing",
+    "updatedAt": "2022-10-30T06:42:58.252Z",
+    "files": [
+      {
+        "name": "root",
+        "content": "",
+        "children": [
+          "632d27898406d4cb56984ebe",
+          "632d27898406d4cb56984ebd",
+          "632d27898406d4cb56984ebf"
+        ],
+        "fileType": "folder",
+        "_id": "632d27898406d4cb56984ec0",
+        "createdAt": "2022-10-30T06:42:58.252Z",
+        "updatedAt": "2022-10-30T06:42:58.252Z",
+        "isSelectedFile": false,
+        "id": "632d27898406d4cb56984ec0"
+      },
+      {
+        "name": "sketch.js",
+        "content": "let hueAdding = true;\nlet currentHue = 0;\nlet currentState = \"\";\n\nlet drawLine = (sc, sw) => {\n  if (mouseIsPressed === true) {\n    stroke(sc);\n    strokeWeight(sw);\n    line(mouseX, mouseY, pmouseX, pmouseY);\n  }\n};\n\nlet colorfulLine = () => {\n  if (mouseIsPressed === true) {\n    strokeWeight(20);\n    stroke(currentHue, 100, 100);\n    line(mouseX, mouseY, pmouseX, pmouseY);\n  }\n\n  if (hueAdding == true) {\n    currentHue += 5;\n  } else {\n    currentHue -= 5;\n  }\n\n  if (currentHue >= 255) {\n    hueAdding = false;\n  } else if (currentHue <= 0) {\n    hueAdding = true;\n  }\n}\n\nlet drawUpdate = () => {};\n\nlet showIns = (w) => {\n  fill(255);\n  strokeWeight(2);\n  stroke(0);\n  rect(25, height-70, 200, 65);\n  noStroke();\n  textSize(15);\n  fill(0);\n  text((w === \"d\") ? \"> \"+ \"D - Normal drawing mode\":\"\" + \"D - Normal drawing mode\", 30, height - 55);\n  text((w === \"x\") ? \"> \"+ \"X - Draw colorful lines!\":\"\" + \"X - Draw colorful lines!\", 30, height - 40);\n  text((w === \"e\") ? \"> \"+ \"E - Eraser\":\"\" + \"E - Eraser\", 30, height - 25);\n  fill(0, 75, 75);\n  text((w === \"c\") ? \"> \"+ \"C - Clear all!\":\"\" + \"C - Clear all!\", 30, height - 10);\n};\n\nfunction setup() {\n  createCanvas(600, 600);\n  colorMode(HSB);\n  background(255);\n}\n\nfunction draw() {\n  drawUpdate();\n  showIns(currentState);\n}\n\nfunction keyPressed() {\n  if (key === \"C\" || key === \"c\") {\n    drawUpdate = () => {\n      background(255);\n    };\n    currentState = \"c\";\n    \n  } else if (key === \"E\" || key === \"e\") {\n    drawUpdate = () => {\n      drawLine(255, 40);\n    };\n    currentState = \"e\";\n    \n  } else if (key === \"D\" || key === \"d\") {\n    drawUpdate = () => {\n      drawLine(0, 20);\n    };\n    currentState = \"d\";\n    \n  } else if (key === \"X\" || key === \"x\") {\n    drawUpdate = () => {\n      colorfulLine();\n    };\n    currentState = \"x\";\n    \n  }\n}\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "632d27898406d4cb56984ebd",
+        "isSelectedFile": true,
+        "createdAt": "2022-10-30T06:42:58.252Z",
+        "updatedAt": "2022-10-30T06:42:58.252Z",
+        "id": "632d27898406d4cb56984ebd"
+      },
+      {
+        "name": "index.html",
+        "content": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.js\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/addons/p5.sound.min.js\"></script>\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">\n    <meta charset=\"utf-8\" />\n\n  </head>\n  <body>\n    <main>\n    </main>\n    <script src=\"sketch.js\"></script>\n  </body>\n</html>\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "632d27898406d4cb56984ebe",
+        "createdAt": "2022-10-30T06:42:58.252Z",
+        "updatedAt": "2022-10-30T06:42:58.252Z",
+        "isSelectedFile": false,
+        "id": "632d27898406d4cb56984ebe"
+      },
+      {
+        "name": "style.css",
+        "content": "html, body {\n  margin: 0;\n  padding: 0;\n}\ncanvas {\n  display: block;\n}\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "632d27898406d4cb56984ebf",
+        "createdAt": "2022-10-30T06:42:58.252Z",
+        "updatedAt": "2022-10-30T06:42:58.252Z",
+        "isSelectedFile": false,
+        "id": "632d27898406d4cb56984ebf"
+      }
+    ],
+    "createdAt": "2022-09-23T03:29:24.727Z",
+    "id": "kqWIKgZ9P"
+  },
+  {
+    "_id": "xiZGcQxWM",
+    "name": "bezier curve demo copy",
+    "files": [
+      {
+        "name": "root",
+        "content": "",
+        "children": [
+          "63521a5603280c73496f3ede",
+          "63521a5603280c73496f3edf",
+          "63521a5603280c73496f3ee0"
+        ],
+        "fileType": "folder",
+        "_id": "63521a5603280c73496f3edd",
+        "updatedAt": "2022-10-21T04:05:42.596Z",
+        "createdAt": "2022-10-21T04:05:42.596Z",
+        "id": "63521a5603280c73496f3edd"
+      },
+      {
+        "name": "sketch.js",
+        "content": "// bezier curve demo. drag the anchor/control points.\n\nlet pts = [];\n\nfunction setup() {\n  createCanvas(400, 400);\n  pts = [\n    createVector(50, 50),\n    createVector(100, 300),\n    createVector(300, 300),\n    createVector(350, 50)\n  ];\n}\n\nfunction draw() {\n  background(220);\n  noFill();\n  stroke(0);\n  strokeWeight(4);\n  bezier(pts[0].x, pts[0].y,\n         pts[1].x, pts[1].y,\n         pts[2].x, pts[2].y,\n         pts[3].x, pts[3].y);\n  \n  noStroke();\n  fill(255);\n  for (let pt of pts) {\n  \tellipse(pt.x, pt.y, 20, 20);\n  }\n  \n  if (mouseIsPressed) {\n    for (let pt of pts) {\n      if (dist(mouseX, mouseY, pt.x, pt.y) < 20) {\n        pt.x = mouseX;\n        pt.y = mouseY;\n        print(pt.x, pt.y)\n        break;\n      }\n    }\n  }\n  \n  noStroke();\n  fill(0);\n  textSize(12);\n  text(\"bezier curve demo / drag the handles to change the curve\", 4, height-4);\n  \n}",
+        "children": [],
+        "fileType": "file",
+        "_id": "63521a5603280c73496f3edf",
+        "updatedAt": "2022-10-21T04:05:42.596Z",
+        "createdAt": "2022-10-21T04:05:42.596Z",
+        "isSelectedFile": true,
+        "id": "63521a5603280c73496f3edf"
+      },
+      {
+        "name": "index.html",
+        "content": "<!DOCTYPE html>\n<html>\n  <head>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.min.js\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.min.js\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.sound.min.js\"></script>\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">\n    <meta charset=\"utf-8\" />\n\n  </head>\n  <body>\n    <script src=\"sketch.js\"></script>\n  </body>\n</html>\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "63521a5603280c73496f3ede",
+        "updatedAt": "2022-10-21T04:05:42.596Z",
+        "createdAt": "2022-10-21T04:05:42.596Z",
+        "id": "63521a5603280c73496f3ede"
+      },
+      {
+        "name": "style.css",
+        "content": "html, body {\n  margin: 0;\n  padding: 0;\n}\ncanvas {\n  display: block;\n}\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "63521a5603280c73496f3ee0",
+        "updatedAt": "2022-10-21T04:05:42.596Z",
+        "createdAt": "2022-10-21T04:05:42.596Z",
+        "id": "63521a5603280c73496f3ee0"
+      }
+    ],
+    "createdAt": "2022-10-21T04:04:39.099Z",
+    "updatedAt": "2022-10-21T04:05:42.596Z",
+    "id": "xiZGcQxWM"
+  },
+  {
+    "_id": "SN_hkC3ob",
+    "name": "Blush dogwood",
+    "updatedAt": "2022-11-25T03:33:37.077Z",
+    "files": [
+      {
+        "name": "root",
+        "content": "",
+        "children": [
+          "6380378e36eacb56ee678670",
+          "6380378e36eacb56ee67866f",
+          "6380378e36eacb56ee678671"
+        ],
+        "fileType": "folder",
+        "_id": "6380378e36eacb56ee678672",
+        "createdAt": "2022-11-25T03:33:37.077Z",
+        "updatedAt": "2022-11-25T03:33:37.077Z",
+        "id": "6380378e36eacb56ee678672"
+      },
+      {
+        "name": "sketch.js",
+        "content": "function setup() {\n  createCanvas(400, 400);\n}\n\nfunction draw() {\n  background(220);\n}",
+        "children": [],
+        "fileType": "file",
+        "_id": "6380378e36eacb56ee67866f",
+        "isSelectedFile": true,
+        "createdAt": "2022-11-25T03:33:37.077Z",
+        "updatedAt": "2022-11-25T03:33:37.077Z",
+        "id": "6380378e36eacb56ee67866f"
+      },
+      {
+        "name": "index.html",
+        "content": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/addons/p5.sound.min.js\"></script>\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">\n    <meta charset=\"utf-8\" />\n\n  </head>\n  <body>\n    <main>\n    </main>\n    <script src=\"sketch.js\"></script>\n  </body>\n</html>\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "6380378e36eacb56ee678670",
+        "createdAt": "2022-11-25T03:33:37.077Z",
+        "updatedAt": "2022-11-25T03:33:37.077Z",
+        "id": "6380378e36eacb56ee678670"
+      },
+      {
+        "name": "style.css",
+        "content": "html, body {\n  margin: 0;\n  padding: 0;\n}\ncanvas {\n  display: block;\n}\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "6380378e36eacb56ee678671",
+        "createdAt": "2022-11-25T03:33:37.077Z",
+        "updatedAt": "2022-11-25T03:33:37.077Z",
+        "id": "6380378e36eacb56ee678671"
+      }
+    ],
+    "createdAt": "2022-11-25T03:33:37.077Z",
+    "id": "SN_hkC3ob"
+  },
+  {
+    "_id": "fPnXXasz6",
+    "name": "Chlorinated september",
+    "updatedAt": "2022-09-15T04:27:15.848Z",
+    "files": [
+      {
+        "name": "root",
+        "content": "",
+        "children": [
+          "63229d2ed8862dd7ab7c055e",
+          "63229d2ed8862dd7ab7c055d",
+          "63229d2ed8862dd7ab7c055f"
+        ],
+        "fileType": "folder",
+        "_id": "63229d2ed8862dd7ab7c0560",
+        "createdAt": "2022-09-15T04:27:15.848Z",
+        "updatedAt": "2022-09-15T04:27:15.848Z",
+        "id": "63229d2ed8862dd7ab7c0560"
+      },
+      {
+        "name": "sketch.js",
+        "content": "function setup() {\n  createCanvas(400, 400);\n}\n\nfunction draw() {\n  background(220);\n  \n  noStroke()\n  \n  fill(color(205, 170, 80))\n  triangle(mouseX,mouseY,0,height,width,height);\n}",
+        "children": [],
+        "fileType": "file",
+        "_id": "63229d2ed8862dd7ab7c055d",
+        "isSelectedFile": true,
+        "createdAt": "2022-09-15T04:27:15.848Z",
+        "updatedAt": "2022-09-15T04:27:15.848Z",
+        "id": "63229d2ed8862dd7ab7c055d"
+      },
+      {
+        "name": "index.html",
+        "content": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.js\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/addons/p5.sound.min.js\"></script>\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">\n    <meta charset=\"utf-8\" />\n\n  </head>\n  <body>\n    <main>\n    </main>\n    <script src=\"sketch.js\"></script>\n  </body>\n</html>\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "63229d2ed8862dd7ab7c055e",
+        "createdAt": "2022-09-15T04:27:15.848Z",
+        "updatedAt": "2022-09-15T04:27:15.848Z",
+        "id": "63229d2ed8862dd7ab7c055e"
+      },
+      {
+        "name": "style.css",
+        "content": "html, body {\n  margin: 0;\n  padding: 0;\n}\ncanvas {\n  display: block;\n}\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "63229d2ed8862dd7ab7c055f",
+        "createdAt": "2022-09-15T04:27:15.848Z",
+        "updatedAt": "2022-09-15T04:27:15.848Z",
+        "id": "63229d2ed8862dd7ab7c055f"
+      }
+    ],
+    "createdAt": "2022-09-15T04:01:11.937Z",
+    "id": "fPnXXasz6"
+  },
+  {
+    "_id": "ZzaBDeIzf",
+    "name": "Confetti",
+    "updatedAt": "2022-10-31T13:55:00.882Z",
+    "files": [
+      {
+        "name": "root",
+        "content": "",
+        "children": [
+          "635f7306d914ace17889cfd7",
+          "635f7306d914ace17889cfd6",
+          "635f7306d914ace17889cfd8"
+        ],
+        "fileType": "folder",
+        "_id": "635f7306d914ace17889cfd9",
+        "createdAt": "2022-10-31T13:55:00.882Z",
+        "updatedAt": "2022-10-31T13:55:00.882Z",
+        "isSelectedFile": false,
+        "id": "635f7306d914ace17889cfd9"
+      },
+      {
+        "name": "sketch.js",
+        "content": "let confettiArr = [];\nlet pressTime = 0;\n\nfunction setup() {\n  createCanvas(400, 400);\n  colorMode(HSB);\n\n  for (let i = 0; i < random(50, 70); i++) {\n    confettiArr[i] = new confetti(random(width), random(height));\n  }\n}\n\nfunction draw() {\n  background(255);\n  for (let i = 0; i < confettiArr.length; i++) {\n    confettiArr[i].display();\n    confettiArr[i].move();\n    if (confettiArr[i].y > height) {\n      confettiArr[i] = new confetti(random(width), 0);\n    }\n  }\n}\n\nfunction mousePressed() {\n  //press mouse button to increase the density.\n  for (let i = 0; i < random(50, 70); i++) {\n    confettiArr.push(new confetti(random(width), random(height)));\n  }\n  //press 5 times resets the array\n  if (pressTime >= 5) {\n    let tempArr = [];\n    for (let i = 0; i < random(50, 70); i++) {\n      tempArr[i] = new confetti(random(width), random(height));\n    }\n    confettiArr = tempArr;\n    pressTime = 0;\n    return;\n  }\n  pressTime++;\n}\n\nclass confetti {\n  constructor(x, y) {\n    this.x = x;\n    this.y = y;\n    this.xSize = random(10, 20);\n    this.ySize = 0.7 * this.xSize;\n    this.hue = random(0, 255);\n    this.time = 0;\n    this.amp = random(5, 10);\n    this.angReset = random(0, 2 * PI);//each confetti start rotating at a different place.\n  }\n  display() {\n    push();\n    translate(this.x, this.y);\n    rotate(this.time+this.angReset);\n\n    noStroke();\n    fill(this.hue, 75, 75);\n\n    let cXSize = this.xSize * sin(this.time + this.angReset);//mimic confetti rotation\n    let cYSize = this.ySize * cos(this.time + this.angReset);\n\n    rect(-cXSize / 2, -cYSize / 2, cXSize, cYSize);\n    pop();\n    this.time += this.amp / 100;\n  }\n  move() {\n    this.y += this.amp / 2;\n  }\n}\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "635f7306d914ace17889cfd6",
+        "isSelectedFile": true,
+        "createdAt": "2022-10-31T13:55:00.882Z",
+        "updatedAt": "2022-10-31T13:55:00.882Z",
+        "id": "635f7306d914ace17889cfd6"
+      },
+      {
+        "name": "index.html",
+        "content": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.js\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/addons/p5.sound.min.js\"></script>\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">\n    <meta charset=\"utf-8\" />\n\n  </head>\n  <body>\n    <main>\n    </main>\n    <script src=\"sketch.js\"></script>\n  </body>\n</html>\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "635f7306d914ace17889cfd7",
+        "createdAt": "2022-10-31T13:55:00.882Z",
+        "updatedAt": "2022-10-31T13:55:00.882Z",
+        "isSelectedFile": false,
+        "id": "635f7306d914ace17889cfd7"
+      },
+      {
+        "name": "style.css",
+        "content": "html, body {\n  margin: 0;\n  padding: 0;\n}\ncanvas {\n  display: block;\n}\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "635f7306d914ace17889cfd8",
+        "createdAt": "2022-10-31T13:55:00.882Z",
+        "updatedAt": "2022-10-31T13:55:00.882Z",
+        "isSelectedFile": false,
+        "id": "635f7306d914ace17889cfd8"
+      }
+    ],
+    "createdAt": "2022-10-31T07:10:29.112Z",
+    "id": "ZzaBDeIzf"
+  },
+  {
+    "_id": "IQ9Pxchii",
+    "name": "dancerTemplate_v3 copy",
+    "files": [
+      {
+        "name": "root",
+        "content": "",
+        "children": [
+          "6352175763132cd790a8ccdf",
+          "6352175763132cd790a8cce0",
+          "6352175763132cd790a8cce1",
+          "6352175763132cd790a8cce2"
+        ],
+        "fileType": "folder",
+        "_id": "6352175763132cd790a8ccde",
+        "createdAt": "2022-10-23T03:28:01.835Z",
+        "updatedAt": "2022-10-23T03:28:01.835Z",
+        "isSelectedFile": false,
+        "id": "6352175763132cd790a8ccde"
+      },
+      {
+        "name": "sketch.js",
+        "content": "/*\n  Check our the GOAL and the RULES of this exercise at the bottom of this file.\n  \n  After that, follow these steps before you start coding:\n\n  1. rename the dancer class to reflect your name (line 35).\n  2. adjust line 20 to reflect your dancer's name, too.\n  3. run the code and see if a square (your dancer) appears on the canvas.\n  4. start coding your dancer inside the class that has been prepared for you.\n  5. have fun.\n  \n  \n*/\nlet dancer;\n\nfunction setup() {\n  // no adjustments in the setup function needed...\n  createCanvas(windowWidth, windowHeight);\n  // ...except to adjust the dancer's name on the next line:\n  dancer = new LeoDancer(width/2, height/2);\n}\n\nfunction draw() {\n  // you don't need to make any adjustments inside the draw loop\n  background(0);\n  drawFloor(); // for reference only\n  dancer.update();\n  dancer.display(); \n  \n}\n\n\n// You only code inside this class.\n// Start by giving the dancer your name, e.g. LeonDancer.\nclass LeoDancer{\n  constructor(startX, startY){\n    this.x = startX;\n    this.y = startY;\n    this.ang = 0;\n    this.armArr = [-25, 20, -100, -35, 100, -25, 50, 15];\n    this.bodyArr = [0, -15, 0, -15, 0, 35, 0, 35];\n    this.leftFootArr = [0, 35, -15, 50, -25, 75, -25, 100]\n    this.rightFootArr = [0, 35, 15, 50, 25, 75, 25, 100]\n    // add properties for your dancer here:\n    //..\n    //..\n    //..\n    \n  }  \n  update(){\n    // update properties here to achieve\n    // your dancer's desired moves and behaviour\n    this.ang += 0.1*random(0,4);\n    //this.armArr.forEach((i,n,a)=>{a[n]=i+sin(this.ang)});\n    this.armArr[0] = -25+sin(this.ang*0.8)*20\n    this.armArr[1] = 15+cos(this.ang*0.5)*5\n    this.armArr[6] = 15+map(sin(this.ang*0.5), -1, 1, -20, 20)\n    this.armArr[7] = 15+map(cos(this.ang*0.5), -1, 1, -75, 20)\n    this.rightFootArr[6] = 25+sin(this.ang*0.5)*15\n    this.leftFootArr[6] = -25-sin(this.ang*0.1)*15\n    this.bodyArr[6] = sin(this.ang*0.5)*5\n    this.leftFootArr[0] = sin(this.ang*0.5)*5\n    this.rightFootArr[0] = sin(this.ang*0.5)*5\n  }\n  display(){\n    // the push and pop, along with the translate \n    // places your whole dancer object at this.x and this.y.\n    // you may change its position on line 19 to see the effect.\n    push();\n    translate(this.x, this.y);\n    \n    \n    // ******** //\n    // ⬇️ draw your dancer here ⬇️\n    \n    noFill();\n    stroke(255);\n    strokeWeight(4);\n    bezier(this.armArr[0], this.armArr[1], this.armArr[2], this.armArr[3], this.armArr[4], this.armArr[5], this.armArr[6], this.armArr[7])\n    bezier(this.bodyArr[0], this.bodyArr[1], this.bodyArr[2], this.bodyArr[3], this.bodyArr[4], this.bodyArr[5], this.bodyArr[6], this.bodyArr[7])\n    bezier(this.leftFootArr[0], this.leftFootArr[1], this.leftFootArr[2], this.leftFootArr[3], this.leftFootArr[4], this.leftFootArr[5], this.leftFootArr[6], this.leftFootArr[7])\n    bezier(this.rightFootArr[0], this.rightFootArr[1], this.rightFootArr[2], this.rightFootArr[3], this.rightFootArr[4], this.rightFootArr[5], this.rightFootArr[6], this.rightFootArr[7])\n    circle(cos(this.ang*0.5)*5, -45, 50)\n    \n    // ⬆️ draw your dancer here ⬆️\n    \n    \n    \n    \n    // ******** //\n    // the next function draws a SQUARE and CROSS\n    // to indicate the approximate size and the center point\n    // of your dancer.\n    // it is using \"this\" because this function, too, \n    // is a part if your Dancer object.\n    // comment it out or delete it eventually.\n    this.drawReferenceShapes()\n   \n    \n    \n    pop();\n  }  \n  drawReferenceShapes(){\n    noFill();\n    stroke(255, 0, 0);\n    line(-5, 0, 5, 0);\n    line(0, -5, 0, 5);\n    stroke(255);                       \n    rect(-100, -100, 200, 200);    \n    fill(255);\n    stroke(0);\n  }\n  \n  \n}\n\n\n\n\n\n/*\nGOAL:\nThe goal is for you to write a class that produces a dancing being/creature/object/thing. In the next class, your dancer along with your peers' dancers will all dance in the same sketch that your instructor will put together. \n\nRULES:\nFor this to work you need to follow one rule: \n  - Only put relevant code into your dancer class; your dancer cannot depend on code outside of itself (like global variables or functions defined outside)\n  - Your dancer must perform by means of the two essential methods: update and display. Don't add more methods that require to be called from outside (e.g. in the draw loop).\n  - Your dancer will always be initialized receiving two arguments: \n    - startX (currently the horizontal center of the canvas)\n    - startY (currently the vertical center of the canvas)\n  beside these, please don't add more parameters into the constructor function \n  - lastly, to make sure our dancers will harmomize once on the same canvas, please don't make your dancer bigger than 200x200 pixels. \n\n*/",
+        "children": [],
+        "fileType": "file",
+        "_id": "6352175763132cd790a8cce1",
+        "isSelectedFile": true,
+        "createdAt": "2022-10-23T03:28:01.835Z",
+        "updatedAt": "2022-10-23T03:28:01.835Z",
+        "id": "6352175763132cd790a8cce1"
+      },
+      {
+        "name": "index.html",
+        "content": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js\"></script>\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">\n    <meta charset=\"utf-8\" />\n\n  </head>\n  <body>\n    <script src=\"floor.js\"></script>\n    <script src=\"sketch.js\"></script>\n  </body>\n</html>\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "6352175763132cd790a8cce0",
+        "createdAt": "2022-10-23T03:28:01.835Z",
+        "updatedAt": "2022-10-23T03:28:01.835Z",
+        "isSelectedFile": false,
+        "id": "6352175763132cd790a8cce0"
+      },
+      {
+        "name": "style.css",
+        "content": "html, body {\n  margin: 0;\n  padding: 0;\n}\ncanvas {\n  display: block;\n}\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "6352175763132cd790a8cce2",
+        "createdAt": "2022-10-23T03:28:01.835Z",
+        "updatedAt": "2022-10-23T03:28:01.835Z",
+        "isSelectedFile": false,
+        "id": "6352175763132cd790a8cce2"
+      },
+      {
+        "name": "floor.js",
+        "content": "function drawFloor() {\n  push();\n  let perspY = height * 0.3;\n  let tileW = width/30;\n\n  for (let x=-150; x <= width+150; x += tileW) {\n    stroke(45);\n    line(width/2, perspY, x, height);\n  }\n  let dy = 5;\n  let y = height * 0.6;\n  while (y <= height) {\n    line(0, y, width, y);\n    dy *= 1.05;\n    y += dy;\n  }\n\n  fill(0);\n  noStroke();\n  beginShape();\n  vertex(-151, height);\n  vertex(width/2, perspY);\n  vertex(-151, perspY);\n  endShape();\n  beginShape();\n  vertex(width+151, height);\n  vertex(width/2+1, perspY);\n  vertex(width+151, perspY);\n  endShape();\n  rect(0, 0, width, height * 0.6);\n  fill(180)\n  textSize(10);\n  text(\"note: the grey grid in the background is for reference only.\", 10, height-20)\n  text(\"It represents the 'floor' on which your dancer dances.\", 35, height-9)\n  pop();\n  \n}",
+        "children": [],
+        "fileType": "file",
+        "_id": "6352175763132cd790a8ccdf",
+        "isSelectedFile": false,
+        "updatedAt": "2022-10-23T03:28:01.835Z",
+        "createdAt": "2022-10-23T03:28:01.835Z",
+        "id": "6352175763132cd790a8ccdf"
+      }
+    ],
+    "createdAt": "2022-10-21T03:51:51.501Z",
+    "updatedAt": "2022-10-23T03:28:01.835Z",
+    "id": "IQ9Pxchii"
+  },
+  {
+    "_id": "ZbSe3-qzZ",
+    "name": "Fabulous rifle",
+    "updatedAt": "2022-09-16T04:29:15.051Z",
+    "files": [
+      {
+        "name": "root",
+        "content": "",
+        "children": [
+          "6323ee1f5ccd3f78cd0e3370",
+          "6323ee1f5ccd3f78cd0e336f",
+          "6323ee1f5ccd3f78cd0e3371"
+        ],
+        "fileType": "folder",
+        "_id": "6323ee1f5ccd3f78cd0e3372",
+        "createdAt": "2022-09-16T04:29:15.051Z",
+        "updatedAt": "2022-09-16T04:29:15.051Z",
+        "id": "6323ee1f5ccd3f78cd0e3372"
+      },
+      {
+        "name": "sketch.js",
+        "content": "let cir1X = 50;\nlet cir1Y = 65;\nlet isPulled = false;\n\nfunction setup() {\n  createCanvas(400, 400);\n}\n\nfunction draw() {\n  background(220);\n  \n  if(isPulled){\n    \n  }\n}",
+        "children": [],
+        "fileType": "file",
+        "_id": "6323ee1f5ccd3f78cd0e336f",
+        "isSelectedFile": true,
+        "createdAt": "2022-09-16T04:29:15.051Z",
+        "updatedAt": "2022-09-16T04:29:15.051Z",
+        "id": "6323ee1f5ccd3f78cd0e336f"
+      },
+      {
+        "name": "index.html",
+        "content": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.js\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/addons/p5.sound.min.js\"></script>\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">\n    <meta charset=\"utf-8\" />\n\n  </head>\n  <body>\n    <main>\n    </main>\n    <script src=\"sketch.js\"></script>\n  </body>\n</html>\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "6323ee1f5ccd3f78cd0e3370",
+        "createdAt": "2022-09-16T04:29:15.051Z",
+        "updatedAt": "2022-09-16T04:29:15.051Z",
+        "id": "6323ee1f5ccd3f78cd0e3370"
+      },
+      {
+        "name": "style.css",
+        "content": "html, body {\n  margin: 0;\n  padding: 0;\n}\ncanvas {\n  display: block;\n}\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "6323ee1f5ccd3f78cd0e3371",
+        "createdAt": "2022-09-16T04:29:15.051Z",
+        "updatedAt": "2022-09-16T04:29:15.051Z",
+        "id": "6323ee1f5ccd3f78cd0e3371"
+      }
+    ],
+    "createdAt": "2022-09-16T04:29:10.532Z",
+    "id": "ZbSe3-qzZ"
+  },
+  {
+    "_id": "w0GKI-oiv",
+    "name": "Foamy punishment",
+    "updatedAt": "2022-09-20T04:28:35.907Z",
+    "files": [
+      {
+        "name": "root",
+        "content": "",
+        "children": [
+          "63294143486a1440db2eed2f",
+          "63294143486a1440db2eed2e",
+          "63294143486a1440db2eed30"
+        ],
+        "fileType": "folder",
+        "_id": "63294143486a1440db2eed31",
+        "createdAt": "2022-09-20T04:28:35.906Z",
+        "updatedAt": "2022-09-20T04:28:35.906Z",
+        "id": "63294143486a1440db2eed31"
+      },
+      {
+        "name": "sketch.js",
+        "content": "function setup() {\n  createCanvas(400, 400);\n}\n\nfunction draw() {\n  background(220);\n}",
+        "children": [],
+        "fileType": "file",
+        "_id": "63294143486a1440db2eed2e",
+        "isSelectedFile": true,
+        "createdAt": "2022-09-20T04:28:35.907Z",
+        "updatedAt": "2022-09-20T04:28:35.907Z",
+        "id": "63294143486a1440db2eed2e"
+      },
+      {
+        "name": "index.html",
+        "content": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.js\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/addons/p5.sound.min.js\"></script>\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">\n    <meta charset=\"utf-8\" />\n\n  </head>\n  <body>\n    <main>\n    </main>\n    <script src=\"sketch.js\"></script>\n  </body>\n</html>\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "63294143486a1440db2eed2f",
+        "createdAt": "2022-09-20T04:28:35.907Z",
+        "updatedAt": "2022-09-20T04:28:35.907Z",
+        "id": "63294143486a1440db2eed2f"
+      },
+      {
+        "name": "style.css",
+        "content": "html, body {\n  margin: 0;\n  padding: 0;\n}\ncanvas {\n  display: block;\n}\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "63294143486a1440db2eed30",
+        "createdAt": "2022-09-20T04:28:35.907Z",
+        "updatedAt": "2022-09-20T04:28:35.907Z",
+        "id": "63294143486a1440db2eed30"
+      }
+    ],
+    "createdAt": "2022-09-20T04:28:35.907Z",
+    "id": "w0GKI-oiv"
+  },
+  {
+    "_id": "Zk-UnKnu2",
+    "name": "GIF Capture template F22 copy",
+    "files": [
+      {
+        "name": "root",
+        "content": "",
+        "children": [
+          "633b9d6b0ed2c905a38ba8e3",
+          "633b9d6b0ed2c905a38ba8e4",
+          "633b9d6b0ed2c905a38ba8e5",
+          "633b9d6b0ed2c905a38ba8e6",
+          "633b9d6b0ed2c905a38ba8e7"
+        ],
+        "fileType": "folder",
+        "_id": "633b9d6b0ed2c905a38ba8e2",
+        "isSelectedFile": false,
+        "createdAt": "2022-10-04T02:45:07.798Z",
+        "updatedAt": "2022-10-04T02:45:07.798Z",
+        "id": "633b9d6b0ed2c905a38ba8e2"
+      },
+      {
+        "name": "sketch.js",
+        "content": "/*\n\nInstructions:\nbelow code features three important lines:\n\"setupGif(30)\", \"beginGif()\" and \"endGif(450)\"\n\nWhile coding, comment them OUT (to save time)\nWhen done, comment them IN \n\nPlease don't change their configuration (450 frames at 30fps)\nOtherwise your GIF's filesize will be too large\n\n*/\n\nlet ang = 0;\nlet randomArr = [];\nlet randomHue = 0;\n\nlet atom = (r1, r2) => {\n  circle(\n    map(sin(ang + r1) , -1, 1, 50, width - 50),\n    map(cos(ang + r2) , -1, 1, 50, height - 50),\n    20\n  );\n};\n\nfunction setup() {\n  createCanvas(400, 400);\n  setupGif(30);\n  colorMode(HSB)\n  for (let i = 0; i < random(10, 25); i++) {\n    tArr = [];\n    for (let i = 0; i < 2; i++) {\n      tArr.push(random(10, 50));\n    }\n    randomArr.push(tArr);\n  }\n  randomHue = random(200, 255);\n}\n\nfunction draw() {\n  beginGif();    // start recording for the GIF\n  \n  // YOUR CODE GOES HERE\n  \n  background(randomHue, 65, 65);\n  fill((255-randomHue), 78, 78);\n  textSize(133);\n  textStyle(BOLDITALIC);\n  text('atoms', 0, 125 - (sin(ang * 0.5)*10) );\n  noStroke();\n  fill(255);\n  circle(width / 2, height / 2, map(sin(ang * 0.5), -1, 1, 100, 125));\n  randomArr.forEach((a) => {\n    atom(a[0], a[1]);\n  });\n  ang += 0.05;\n\n  endGif(450);   // stop recording the GIF after 450 frames\n}\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "633b9d6b0ed2c905a38ba8e6",
+        "isSelectedFile": true,
+        "createdAt": "2022-10-04T02:45:07.798Z",
+        "updatedAt": "2022-10-04T02:45:07.798Z",
+        "id": "633b9d6b0ed2c905a38ba8e6"
+      },
+      {
+        "name": "index.html",
+        "content": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js\"></script>\n    <script src=\"https://rawgit.com/spite/ccapture.js/master/build/CCapture.all.min.js\"></script>\n    <script src=\"gif_capture.js\"></script>\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">\n    <meta charset=\"utf-8\" />\n\n  </head>\n  <body>\n    <script src=\"sketch.js\"></script>\n  </body>\n</html>\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "633b9d6b0ed2c905a38ba8e5",
+        "isSelectedFile": false,
+        "createdAt": "2022-10-04T02:45:07.798Z",
+        "updatedAt": "2022-10-04T02:45:07.798Z",
+        "id": "633b9d6b0ed2c905a38ba8e5"
+      },
+      {
+        "name": "style.css",
+        "content": "html, body {\n  margin: 0;\n  padding: 0;\n}\ncanvas {\n  display: block;\n}\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "633b9d6b0ed2c905a38ba8e7",
+        "isSelectedFile": false,
+        "createdAt": "2022-10-04T02:45:07.798Z",
+        "updatedAt": "2022-10-04T02:45:07.798Z",
+        "id": "633b9d6b0ed2c905a38ba8e7"
+      },
+      {
+        "name": "gif.worker.js",
+        "content": "// gif.worker.js 0.2.0 - https://github.com/jnordberg/gif.js\n(function e(t, n, r) {\n  function s(o, u) {\n    if (!n[o]) {\n      if (!t[o]) {\n        var a = typeof require == \"function\" && require;\n        if (!u && a) return a(o, !0);\n        if (i) return i(o, !0);\n        var f = new Error(\"Cannot find module '\" + o + \"'\");\n        throw ((f.code = \"MODULE_NOT_FOUND\"), f);\n      }\n      var l = (n[o] = { exports: {} });\n      t[o][0].call(\n        l.exports,\n        function (e) {\n          var n = t[o][1][e];\n          return s(n ? n : e);\n        },\n        l,\n        l.exports,\n        e,\n        t,\n        n,\n        r\n      );\n    }\n    return n[o].exports;\n  }\n  var i = typeof require == \"function\" && require;\n  for (var o = 0; o < r.length; o++) s(r[o]);\n  return s;\n})(\n  {\n    1: [\n      function (require, module, exports) {\n        var NeuQuant = require(\"./TypedNeuQuant.js\");\n        var LZWEncoder = require(\"./LZWEncoder.js\");\n        function ByteArray() {\n          this.page = -1;\n          this.pages = [];\n          this.newPage();\n        }\n        ByteArray.pageSize = 4096;\n        ByteArray.charMap = {};\n        for (var i = 0; i < 256; i++)\n          ByteArray.charMap[i] = String.fromCharCode(i);\n        ByteArray.prototype.newPage = function () {\n          this.pages[++this.page] = new Uint8Array(ByteArray.pageSize);\n          this.cursor = 0;\n        };\n        ByteArray.prototype.getData = function () {\n          var rv = \"\";\n          for (var p = 0; p < this.pages.length; p++) {\n            for (var i = 0; i < ByteArray.pageSize; i++) {\n              rv += ByteArray.charMap[this.pages[p][i]];\n            }\n          }\n          return rv;\n        };\n        ByteArray.prototype.writeByte = function (val) {\n          if (this.cursor >= ByteArray.pageSize) this.newPage();\n          this.pages[this.page][this.cursor++] = val;\n        };\n        ByteArray.prototype.writeUTFBytes = function (string) {\n          for (var l = string.length, i = 0; i < l; i++)\n            this.writeByte(string.charCodeAt(i));\n        };\n        ByteArray.prototype.writeBytes = function (array, offset, length) {\n          for (var l = length || array.length, i = offset || 0; i < l; i++)\n            this.writeByte(array[i]);\n        };\n        function GIFEncoder(width, height) {\n          this.width = ~~width;\n          this.height = ~~height;\n          this.transparent = null;\n          this.transIndex = 0;\n          this.repeat = -1;\n          this.delay = 0;\n          this.image = null;\n          this.pixels = null;\n          this.indexedPixels = null;\n          this.colorDepth = null;\n          this.colorTab = null;\n          this.neuQuant = null;\n          this.usedEntry = new Array();\n          this.palSize = 7;\n          this.dispose = -1;\n          this.firstFrame = true;\n          this.sample = 10;\n          this.dither = false;\n          this.globalPalette = false;\n          this.out = new ByteArray();\n        }\n        GIFEncoder.prototype.setDelay = function (milliseconds) {\n          this.delay = Math.round(milliseconds / 10);\n        };\n        GIFEncoder.prototype.setFrameRate = function (fps) {\n          this.delay = Math.round(100 / fps);\n        };\n        GIFEncoder.prototype.setDispose = function (disposalCode) {\n          if (disposalCode >= 0) this.dispose = disposalCode;\n        };\n        GIFEncoder.prototype.setRepeat = function (repeat) {\n          this.repeat = repeat;\n        };\n        GIFEncoder.prototype.setTransparent = function (color) {\n          this.transparent = color;\n        };\n        GIFEncoder.prototype.addFrame = function (imageData) {\n          this.image = imageData;\n          this.colorTab =\n            this.globalPalette && this.globalPalette.slice\n              ? this.globalPalette\n              : null;\n          this.getImagePixels();\n          this.analyzePixels();\n          if (this.globalPalette === true) this.globalPalette = this.colorTab;\n          if (this.firstFrame) {\n            this.writeLSD();\n            this.writePalette();\n            if (this.repeat >= 0) {\n              this.writeNetscapeExt();\n            }\n          }\n          this.writeGraphicCtrlExt();\n          this.writeImageDesc();\n          if (!this.firstFrame && !this.globalPalette) this.writePalette();\n          this.writePixels();\n          this.firstFrame = false;\n        };\n        GIFEncoder.prototype.finish = function () {\n          this.out.writeByte(59);\n        };\n        GIFEncoder.prototype.setQuality = function (quality) {\n          if (quality < 1) quality = 1;\n          this.sample = quality;\n        };\n        GIFEncoder.prototype.setDither = function (dither) {\n          if (dither === true) dither = \"FloydSteinberg\";\n          this.dither = dither;\n        };\n        GIFEncoder.prototype.setGlobalPalette = function (palette) {\n          this.globalPalette = palette;\n        };\n        GIFEncoder.prototype.getGlobalPalette = function () {\n          return (\n            (this.globalPalette &&\n              this.globalPalette.slice &&\n              this.globalPalette.slice(0)) ||\n            this.globalPalette\n          );\n        };\n        GIFEncoder.prototype.writeHeader = function () {\n          this.out.writeUTFBytes(\"GIF89a\");\n        };\n        GIFEncoder.prototype.analyzePixels = function () {\n          if (!this.colorTab) {\n            this.neuQuant = new NeuQuant(this.pixels, this.sample);\n            this.neuQuant.buildColormap();\n            this.colorTab = this.neuQuant.getColormap();\n          }\n          if (this.dither) {\n            this.ditherPixels(\n              this.dither.replace(\"-serpentine\", \"\"),\n              this.dither.match(/-serpentine/) !== null\n            );\n          } else {\n            this.indexPixels();\n          }\n          this.pixels = null;\n          this.colorDepth = 8;\n          this.palSize = 7;\n          if (this.transparent !== null) {\n            this.transIndex = this.findClosest(this.transparent, true);\n          }\n        };\n        GIFEncoder.prototype.indexPixels = function (imgq) {\n          var nPix = this.pixels.length / 3;\n          this.indexedPixels = new Uint8Array(nPix);\n          var k = 0;\n          for (var j = 0; j < nPix; j++) {\n            var index = this.findClosestRGB(\n              this.pixels[k++] & 255,\n              this.pixels[k++] & 255,\n              this.pixels[k++] & 255\n            );\n            this.usedEntry[index] = true;\n            this.indexedPixels[j] = index;\n          }\n        };\n        GIFEncoder.prototype.ditherPixels = function (kernel, serpentine) {\n          var kernels = {\n            FalseFloydSteinberg: [\n              [3 / 8, 1, 0],\n              [3 / 8, 0, 1],\n              [2 / 8, 1, 1],\n            ],\n            FloydSteinberg: [\n              [7 / 16, 1, 0],\n              [3 / 16, -1, 1],\n              [5 / 16, 0, 1],\n              [1 / 16, 1, 1],\n            ],\n            Stucki: [\n              [8 / 42, 1, 0],\n              [4 / 42, 2, 0],\n              [2 / 42, -2, 1],\n              [4 / 42, -1, 1],\n              [8 / 42, 0, 1],\n              [4 / 42, 1, 1],\n              [2 / 42, 2, 1],\n              [1 / 42, -2, 2],\n              [2 / 42, -1, 2],\n              [4 / 42, 0, 2],\n              [2 / 42, 1, 2],\n              [1 / 42, 2, 2],\n            ],\n            Atkinson: [\n              [1 / 8, 1, 0],\n              [1 / 8, 2, 0],\n              [1 / 8, -1, 1],\n              [1 / 8, 0, 1],\n              [1 / 8, 1, 1],\n              [1 / 8, 0, 2],\n            ],\n          };\n          if (!kernel || !kernels[kernel]) {\n            throw \"Unknown dithering kernel: \" + kernel;\n          }\n          var ds = kernels[kernel];\n          var index = 0,\n            height = this.height,\n            width = this.width,\n            data = this.pixels;\n          var direction = serpentine ? -1 : 1;\n          this.indexedPixels = new Uint8Array(this.pixels.length / 3);\n          for (var y = 0; y < height; y++) {\n            if (serpentine) direction = direction * -1;\n            for (\n              var x = direction == 1 ? 0 : width - 1,\n                xend = direction == 1 ? width : 0;\n              x !== xend;\n              x += direction\n            ) {\n              index = y * width + x;\n              var idx = index * 3;\n              var r1 = data[idx];\n              var g1 = data[idx + 1];\n              var b1 = data[idx + 2];\n              idx = this.findClosestRGB(r1, g1, b1);\n              this.usedEntry[idx] = true;\n              this.indexedPixels[index] = idx;\n              idx *= 3;\n              var r2 = this.colorTab[idx];\n              var g2 = this.colorTab[idx + 1];\n              var b2 = this.colorTab[idx + 2];\n              var er = r1 - r2;\n              var eg = g1 - g2;\n              var eb = b1 - b2;\n              for (\n                var i = direction == 1 ? 0 : ds.length - 1,\n                  end = direction == 1 ? ds.length : 0;\n                i !== end;\n                i += direction\n              ) {\n                var x1 = ds[i][1];\n                var y1 = ds[i][2];\n                if (\n                  x1 + x >= 0 &&\n                  x1 + x < width &&\n                  y1 + y >= 0 &&\n                  y1 + y < height\n                ) {\n                  var d = ds[i][0];\n                  idx = index + x1 + y1 * width;\n                  idx *= 3;\n                  data[idx] = Math.max(0, Math.min(255, data[idx] + er * d));\n                  data[idx + 1] = Math.max(\n                    0,\n                    Math.min(255, data[idx + 1] + eg * d)\n                  );\n                  data[idx + 2] = Math.max(\n                    0,\n                    Math.min(255, data[idx + 2] + eb * d)\n                  );\n                }\n              }\n            }\n          }\n        };\n        GIFEncoder.prototype.findClosest = function (c, used) {\n          return this.findClosestRGB(\n            (c & 16711680) >> 16,\n            (c & 65280) >> 8,\n            c & 255,\n            used\n          );\n        };\n        GIFEncoder.prototype.findClosestRGB = function (r, g, b, used) {\n          if (this.colorTab === null) return -1;\n          if (this.neuQuant && !used) {\n            return this.neuQuant.lookupRGB(r, g, b);\n          }\n          var c = b | (g << 8) | (r << 16);\n          var minpos = 0;\n          var dmin = 256 * 256 * 256;\n          var len = this.colorTab.length;\n          for (var i = 0, index = 0; i < len; index++) {\n            var dr = r - (this.colorTab[i++] & 255);\n            var dg = g - (this.colorTab[i++] & 255);\n            var db = b - (this.colorTab[i++] & 255);\n            var d = dr * dr + dg * dg + db * db;\n            if ((!used || this.usedEntry[index]) && d < dmin) {\n              dmin = d;\n              minpos = index;\n            }\n          }\n          return minpos;\n        };\n        GIFEncoder.prototype.getImagePixels = function () {\n          var w = this.width;\n          var h = this.height;\n          this.pixels = new Uint8Array(w * h * 3);\n          var data = this.image;\n          var srcPos = 0;\n          var count = 0;\n          for (var i = 0; i < h; i++) {\n            for (var j = 0; j < w; j++) {\n              this.pixels[count++] = data[srcPos++];\n              this.pixels[count++] = data[srcPos++];\n              this.pixels[count++] = data[srcPos++];\n              srcPos++;\n            }\n          }\n        };\n        GIFEncoder.prototype.writeGraphicCtrlExt = function () {\n          this.out.writeByte(33);\n          this.out.writeByte(249);\n          this.out.writeByte(4);\n          var transp, disp;\n          if (this.transparent === null) {\n            transp = 0;\n            disp = 0;\n          } else {\n            transp = 1;\n            disp = 2;\n          }\n          if (this.dispose >= 0) {\n            disp = dispose & 7;\n          }\n          disp <<= 2;\n          this.out.writeByte(0 | disp | 0 | transp);\n          this.writeShort(this.delay);\n          this.out.writeByte(this.transIndex);\n          this.out.writeByte(0);\n        };\n        GIFEncoder.prototype.writeImageDesc = function () {\n          this.out.writeByte(44);\n          this.writeShort(0);\n          this.writeShort(0);\n          this.writeShort(this.width);\n          this.writeShort(this.height);\n          if (this.firstFrame || this.globalPalette) {\n            this.out.writeByte(0);\n          } else {\n            this.out.writeByte(128 | 0 | 0 | 0 | this.palSize);\n          }\n        };\n        GIFEncoder.prototype.writeLSD = function () {\n          this.writeShort(this.width);\n          this.writeShort(this.height);\n          this.out.writeByte(128 | 112 | 0 | this.palSize);\n          this.out.writeByte(0);\n          this.out.writeByte(0);\n        };\n        GIFEncoder.prototype.writeNetscapeExt = function () {\n          this.out.writeByte(33);\n          this.out.writeByte(255);\n          this.out.writeByte(11);\n          this.out.writeUTFBytes(\"NETSCAPE2.0\");\n          this.out.writeByte(3);\n          this.out.writeByte(1);\n          this.writeShort(this.repeat);\n          this.out.writeByte(0);\n        };\n        GIFEncoder.prototype.writePalette = function () {\n          this.out.writeBytes(this.colorTab);\n          var n = 3 * 256 - this.colorTab.length;\n          for (var i = 0; i < n; i++) this.out.writeByte(0);\n        };\n        GIFEncoder.prototype.writeShort = function (pValue) {\n          this.out.writeByte(pValue & 255);\n          this.out.writeByte((pValue >> 8) & 255);\n        };\n        GIFEncoder.prototype.writePixels = function () {\n          var enc = new LZWEncoder(\n            this.width,\n            this.height,\n            this.indexedPixels,\n            this.colorDepth\n          );\n          enc.encode(this.out);\n        };\n        GIFEncoder.prototype.stream = function () {\n          return this.out;\n        };\n        module.exports = GIFEncoder;\n      },\n      { \"./LZWEncoder.js\": 2, \"./TypedNeuQuant.js\": 3 },\n    ],\n    2: [\n      function (require, module, exports) {\n        var EOF = -1;\n        var BITS = 12;\n        var HSIZE = 5003;\n        var masks = [\n          0,\n          1,\n          3,\n          7,\n          15,\n          31,\n          63,\n          127,\n          255,\n          511,\n          1023,\n          2047,\n          4095,\n          8191,\n          16383,\n          32767,\n          65535,\n        ];\n        function LZWEncoder(width, height, pixels, colorDepth) {\n          var initCodeSize = Math.max(2, colorDepth);\n          var accum = new Uint8Array(256);\n          var htab = new Int32Array(HSIZE);\n          var codetab = new Int32Array(HSIZE);\n          var cur_accum,\n            cur_bits = 0;\n          var a_count;\n          var free_ent = 0;\n          var maxcode;\n          var clear_flg = false;\n          var g_init_bits, ClearCode, EOFCode;\n          function char_out(c, outs) {\n            accum[a_count++] = c;\n            if (a_count >= 254) flush_char(outs);\n          }\n          function cl_block(outs) {\n            cl_hash(HSIZE);\n            free_ent = ClearCode + 2;\n            clear_flg = true;\n            output(ClearCode, outs);\n          }\n          function cl_hash(hsize) {\n            for (var i = 0; i < hsize; ++i) htab[i] = -1;\n          }\n          function compress(init_bits, outs) {\n            var fcode, c, i, ent, disp, hsize_reg, hshift;\n            g_init_bits = init_bits;\n            clear_flg = false;\n            n_bits = g_init_bits;\n            maxcode = MAXCODE(n_bits);\n            ClearCode = 1 << (init_bits - 1);\n            EOFCode = ClearCode + 1;\n            free_ent = ClearCode + 2;\n            a_count = 0;\n            ent = nextPixel();\n            hshift = 0;\n            for (fcode = HSIZE; fcode < 65536; fcode *= 2) ++hshift;\n            hshift = 8 - hshift;\n            hsize_reg = HSIZE;\n            cl_hash(hsize_reg);\n            output(ClearCode, outs);\n            outer_loop: while ((c = nextPixel()) != EOF) {\n              fcode = (c << BITS) + ent;\n              i = (c << hshift) ^ ent;\n              if (htab[i] === fcode) {\n                ent = codetab[i];\n                continue;\n              } else if (htab[i] >= 0) {\n                disp = hsize_reg - i;\n                if (i === 0) disp = 1;\n                do {\n                  if ((i -= disp) < 0) i += hsize_reg;\n                  if (htab[i] === fcode) {\n                    ent = codetab[i];\n                    continue outer_loop;\n                  }\n                } while (htab[i] >= 0);\n              }\n              output(ent, outs);\n              ent = c;\n              if (free_ent < 1 << BITS) {\n                codetab[i] = free_ent++;\n                htab[i] = fcode;\n              } else {\n                cl_block(outs);\n              }\n            }\n            output(ent, outs);\n            output(EOFCode, outs);\n          }\n          function encode(outs) {\n            outs.writeByte(initCodeSize);\n            remaining = width * height;\n            curPixel = 0;\n            compress(initCodeSize + 1, outs);\n            outs.writeByte(0);\n          }\n          function flush_char(outs) {\n            if (a_count > 0) {\n              outs.writeByte(a_count);\n              outs.writeBytes(accum, 0, a_count);\n              a_count = 0;\n            }\n          }\n          function MAXCODE(n_bits) {\n            return (1 << n_bits) - 1;\n          }\n          function nextPixel() {\n            if (remaining === 0) return EOF;\n            --remaining;\n            var pix = pixels[curPixel++];\n            return pix & 255;\n          }\n          function output(code, outs) {\n            cur_accum &= masks[cur_bits];\n            if (cur_bits > 0) cur_accum |= code << cur_bits;\n            else cur_accum = code;\n            cur_bits += n_bits;\n            while (cur_bits >= 8) {\n              char_out(cur_accum & 255, outs);\n              cur_accum >>= 8;\n              cur_bits -= 8;\n            }\n            if (free_ent > maxcode || clear_flg) {\n              if (clear_flg) {\n                maxcode = MAXCODE((n_bits = g_init_bits));\n                clear_flg = false;\n              } else {\n                ++n_bits;\n                if (n_bits == BITS) maxcode = 1 << BITS;\n                else maxcode = MAXCODE(n_bits);\n              }\n            }\n            if (code == EOFCode) {\n              while (cur_bits > 0) {\n                char_out(cur_accum & 255, outs);\n                cur_accum >>= 8;\n                cur_bits -= 8;\n              }\n              flush_char(outs);\n            }\n          }\n          this.encode = encode;\n        }\n        module.exports = LZWEncoder;\n      },\n      {},\n    ],\n    3: [\n      function (require, module, exports) {\n        var ncycles = 100;\n        var netsize = 256;\n        var maxnetpos = netsize - 1;\n        var netbiasshift = 4;\n        var intbiasshift = 16;\n        var intbias = 1 << intbiasshift;\n        var gammashift = 10;\n        var gamma = 1 << gammashift;\n        var betashift = 10;\n        var beta = intbias >> betashift;\n        var betagamma = intbias << (gammashift - betashift);\n        var initrad = netsize >> 3;\n        var radiusbiasshift = 6;\n        var radiusbias = 1 << radiusbiasshift;\n        var initradius = initrad * radiusbias;\n        var radiusdec = 30;\n        var alphabiasshift = 10;\n        var initalpha = 1 << alphabiasshift;\n        var alphadec;\n        var radbiasshift = 8;\n        var radbias = 1 << radbiasshift;\n        var alpharadbshift = alphabiasshift + radbiasshift;\n        var alpharadbias = 1 << alpharadbshift;\n        var prime1 = 499;\n        var prime2 = 491;\n        var prime3 = 487;\n        var prime4 = 503;\n        var minpicturebytes = 3 * prime4;\n        function NeuQuant(pixels, samplefac) {\n          var network;\n          var netindex;\n          var bias;\n          var freq;\n          var radpower;\n          function init() {\n            network = [];\n            netindex = new Int32Array(256);\n            bias = new Int32Array(netsize);\n            freq = new Int32Array(netsize);\n            radpower = new Int32Array(netsize >> 3);\n            var i, v;\n            for (i = 0; i < netsize; i++) {\n              v = (i << (netbiasshift + 8)) / netsize;\n              network[i] = new Float64Array([v, v, v, 0]);\n              freq[i] = intbias / netsize;\n              bias[i] = 0;\n            }\n          }\n          function unbiasnet() {\n            for (var i = 0; i < netsize; i++) {\n              network[i][0] >>= netbiasshift;\n              network[i][1] >>= netbiasshift;\n              network[i][2] >>= netbiasshift;\n              network[i][3] = i;\n            }\n          }\n          function altersingle(alpha, i, b, g, r) {\n            network[i][0] -= (alpha * (network[i][0] - b)) / initalpha;\n            network[i][1] -= (alpha * (network[i][1] - g)) / initalpha;\n            network[i][2] -= (alpha * (network[i][2] - r)) / initalpha;\n          }\n          function alterneigh(radius, i, b, g, r) {\n            var lo = Math.abs(i - radius);\n            var hi = Math.min(i + radius, netsize);\n            var j = i + 1;\n            var k = i - 1;\n            var m = 1;\n            var p, a;\n            while (j < hi || k > lo) {\n              a = radpower[m++];\n              if (j < hi) {\n                p = network[j++];\n                p[0] -= (a * (p[0] - b)) / alpharadbias;\n                p[1] -= (a * (p[1] - g)) / alpharadbias;\n                p[2] -= (a * (p[2] - r)) / alpharadbias;\n              }\n              if (k > lo) {\n                p = network[k--];\n                p[0] -= (a * (p[0] - b)) / alpharadbias;\n                p[1] -= (a * (p[1] - g)) / alpharadbias;\n                p[2] -= (a * (p[2] - r)) / alpharadbias;\n              }\n            }\n          }\n          function contest(b, g, r) {\n            var bestd = ~(1 << 31);\n            var bestbiasd = bestd;\n            var bestpos = -1;\n            var bestbiaspos = bestpos;\n            var i, n, dist, biasdist, betafreq;\n            for (i = 0; i < netsize; i++) {\n              n = network[i];\n              dist =\n                Math.abs(n[0] - b) + Math.abs(n[1] - g) + Math.abs(n[2] - r);\n              if (dist < bestd) {\n                bestd = dist;\n                bestpos = i;\n              }\n              biasdist = dist - (bias[i] >> (intbiasshift - netbiasshift));\n              if (biasdist < bestbiasd) {\n                bestbiasd = biasdist;\n                bestbiaspos = i;\n              }\n              betafreq = freq[i] >> betashift;\n              freq[i] -= betafreq;\n              bias[i] += betafreq << gammashift;\n            }\n            freq[bestpos] += beta;\n            bias[bestpos] -= betagamma;\n            return bestbiaspos;\n          }\n          function inxbuild() {\n            var i,\n              j,\n              p,\n              q,\n              smallpos,\n              smallval,\n              previouscol = 0,\n              startpos = 0;\n            for (i = 0; i < netsize; i++) {\n              p = network[i];\n              smallpos = i;\n              smallval = p[1];\n              for (j = i + 1; j < netsize; j++) {\n                q = network[j];\n                if (q[1] < smallval) {\n                  smallpos = j;\n                  smallval = q[1];\n                }\n              }\n              q = network[smallpos];\n              if (i != smallpos) {\n                j = q[0];\n                q[0] = p[0];\n                p[0] = j;\n                j = q[1];\n                q[1] = p[1];\n                p[1] = j;\n                j = q[2];\n                q[2] = p[2];\n                p[2] = j;\n                j = q[3];\n                q[3] = p[3];\n                p[3] = j;\n              }\n              if (smallval != previouscol) {\n                netindex[previouscol] = (startpos + i) >> 1;\n                for (j = previouscol + 1; j < smallval; j++) netindex[j] = i;\n                previouscol = smallval;\n                startpos = i;\n              }\n            }\n            netindex[previouscol] = (startpos + maxnetpos) >> 1;\n            for (j = previouscol + 1; j < 256; j++) netindex[j] = maxnetpos;\n          }\n          function inxsearch(b, g, r) {\n            var a, p, dist;\n            var bestd = 1e3;\n            var best = -1;\n            var i = netindex[g];\n            var j = i - 1;\n            while (i < netsize || j >= 0) {\n              if (i < netsize) {\n                p = network[i];\n                dist = p[1] - g;\n                if (dist >= bestd) i = netsize;\n                else {\n                  i++;\n                  if (dist < 0) dist = -dist;\n                  a = p[0] - b;\n                  if (a < 0) a = -a;\n                  dist += a;\n                  if (dist < bestd) {\n                    a = p[2] - r;\n                    if (a < 0) a = -a;\n                    dist += a;\n                    if (dist < bestd) {\n                      bestd = dist;\n                      best = p[3];\n                    }\n                  }\n                }\n              }\n              if (j >= 0) {\n                p = network[j];\n                dist = g - p[1];\n                if (dist >= bestd) j = -1;\n                else {\n                  j--;\n                  if (dist < 0) dist = -dist;\n                  a = p[0] - b;\n                  if (a < 0) a = -a;\n                  dist += a;\n                  if (dist < bestd) {\n                    a = p[2] - r;\n                    if (a < 0) a = -a;\n                    dist += a;\n                    if (dist < bestd) {\n                      bestd = dist;\n                      best = p[3];\n                    }\n                  }\n                }\n              }\n            }\n            return best;\n          }\n          function learn() {\n            var i;\n            var lengthcount = pixels.length;\n            var alphadec = 30 + (samplefac - 1) / 3;\n            var samplepixels = lengthcount / (3 * samplefac);\n            var delta = ~~(samplepixels / ncycles);\n            var alpha = initalpha;\n            var radius = initradius;\n            var rad = radius >> radiusbiasshift;\n            if (rad <= 1) rad = 0;\n            for (i = 0; i < rad; i++)\n              radpower[i] =\n                alpha * (((rad * rad - i * i) * radbias) / (rad * rad));\n            var step;\n            if (lengthcount < minpicturebytes) {\n              samplefac = 1;\n              step = 3;\n            } else if (lengthcount % prime1 !== 0) {\n              step = 3 * prime1;\n            } else if (lengthcount % prime2 !== 0) {\n              step = 3 * prime2;\n            } else if (lengthcount % prime3 !== 0) {\n              step = 3 * prime3;\n            } else {\n              step = 3 * prime4;\n            }\n            var b, g, r, j;\n            var pix = 0;\n            i = 0;\n            while (i < samplepixels) {\n              b = (pixels[pix] & 255) << netbiasshift;\n              g = (pixels[pix + 1] & 255) << netbiasshift;\n              r = (pixels[pix + 2] & 255) << netbiasshift;\n              j = contest(b, g, r);\n              altersingle(alpha, j, b, g, r);\n              if (rad !== 0) alterneigh(rad, j, b, g, r);\n              pix += step;\n              if (pix >= lengthcount) pix -= lengthcount;\n              i++;\n              if (delta === 0) delta = 1;\n              if (i % delta === 0) {\n                alpha -= alpha / alphadec;\n                radius -= radius / radiusdec;\n                rad = radius >> radiusbiasshift;\n                if (rad <= 1) rad = 0;\n                for (j = 0; j < rad; j++)\n                  radpower[j] =\n                    alpha * (((rad * rad - j * j) * radbias) / (rad * rad));\n              }\n            }\n          }\n          function buildColormap() {\n            init();\n            learn();\n            unbiasnet();\n            inxbuild();\n          }\n          this.buildColormap = buildColormap;\n          function getColormap() {\n            var map = [];\n            var index = [];\n            for (var i = 0; i < netsize; i++) index[network[i][3]] = i;\n            var k = 0;\n            for (var l = 0; l < netsize; l++) {\n              var j = index[l];\n              map[k++] = network[j][0];\n              map[k++] = network[j][1];\n              map[k++] = network[j][2];\n            }\n            return map;\n          }\n          this.getColormap = getColormap;\n          this.lookupRGB = inxsearch;\n        }\n        module.exports = NeuQuant;\n      },\n      {},\n    ],\n    4: [\n      function (require, module, exports) {\n        var GIFEncoder, renderFrame;\n        GIFEncoder = require(\"./GIFEncoder.js\");\n        renderFrame = function (frame) {\n          var encoder, page, stream, transfer;\n          encoder = new GIFEncoder(frame.width, frame.height);\n          if (frame.index === 0) {\n            encoder.writeHeader();\n          } else {\n            encoder.firstFrame = false;\n          }\n          encoder.setTransparent(frame.transparent);\n          encoder.setRepeat(frame.repeat);\n          encoder.setDelay(frame.delay);\n          encoder.setQuality(frame.quality);\n          encoder.setDither(frame.dither);\n          encoder.setGlobalPalette(frame.globalPalette);\n          encoder.addFrame(frame.data);\n          if (frame.last) {\n            encoder.finish();\n          }\n          if (frame.globalPalette === true) {\n            frame.globalPalette = encoder.getGlobalPalette();\n          }\n          stream = encoder.stream();\n          frame.data = stream.pages;\n          frame.cursor = stream.cursor;\n          frame.pageSize = stream.constructor.pageSize;\n          if (frame.canTransfer) {\n            transfer = (function () {\n              var i, len, ref, results;\n              ref = frame.data;\n              results = [];\n              for (i = 0, len = ref.length; i < len; i++) {\n                page = ref[i];\n                results.push(page.buffer);\n              }\n              return results;\n            })();\n            return self.postMessage(frame, transfer);\n          } else {\n            return self.postMessage(frame);\n          }\n        };\n        self.onmessage = function (event) {\n          return renderFrame(event.data);\n        };\n      },\n      { \"./GIFEncoder.js\": 1 },\n    ],\n  },\n  {},\n  [4]\n);\n//# sourceMappingURL=gif.worker.js.map\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "633b9d6b0ed2c905a38ba8e3",
+        "updatedAt": "2022-10-04T02:45:07.798Z",
+        "createdAt": "2022-10-04T02:45:07.798Z",
+        "isSelectedFile": false,
+        "id": "633b9d6b0ed2c905a38ba8e3"
+      },
+      {
+        "name": "gif_capture.js",
+        "content": "let capture;\n\nfunction setupGif(fps) {\n  let options = {\n    format: 'gif',            // 'gif' or 'png' (for still frames)\n    framerate: fps,           // how fast the exported file will play back\n    workersPath: '',\n  };\n  // there exists a 'quality' option as well (0-99?)\n  \n  capture = new CCapture(options);\n}\n\nfunction beginGif() {\n  if (frameCount == 1) {      // start recording on the given frame\n    capture.start();          // comment this line for a fast preview\n  }\n}\n\nfunction endGif(frame) {\n  capture.capture(canvas);    // this captures what's on the screen\n\n  if (frameCount == frame) {  // stop the recording after ... frames\n    capture.stop();\n    capture.save();\n    noLoop();\n  }\n}\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "633b9d6b0ed2c905a38ba8e4",
+        "isSelectedFile": false,
+        "createdAt": "2022-10-04T02:45:07.798Z",
+        "updatedAt": "2022-10-04T02:45:07.798Z",
+        "id": "633b9d6b0ed2c905a38ba8e4"
+      }
+    ],
+    "createdAt": "2022-10-04T02:41:47.531Z",
+    "updatedAt": "2022-10-04T02:45:07.798Z",
+    "id": "Zk-UnKnu2"
+  },
+  {
+    "_id": "r41Bi8Mm4",
+    "name": "Heliotrope lupin",
+    "updatedAt": "2022-09-22T03:44:43.480Z",
+    "files": [
+      {
+        "name": "root",
+        "content": "",
+        "children": [
+          "632bd9d2d68ae3d224dd0fa6",
+          "632bd9d2d68ae3d224dd0fa5",
+          "632bd9d2d68ae3d224dd0fa7"
+        ],
+        "fileType": "folder",
+        "_id": "632bd9d2d68ae3d224dd0fa8",
+        "createdAt": "2022-09-22T03:44:43.480Z",
+        "updatedAt": "2022-09-22T03:44:43.480Z",
+        "id": "632bd9d2d68ae3d224dd0fa8"
+      },
+      {
+        "name": "sketch.js",
+        "content": "function setup() {\n  createCanvas(400, 400);\n}\n\nfunction draw() {\n  background(220);\n}",
+        "children": [],
+        "fileType": "file",
+        "_id": "632bd9d2d68ae3d224dd0fa5",
+        "isSelectedFile": true,
+        "createdAt": "2022-09-22T03:44:43.480Z",
+        "updatedAt": "2022-09-22T03:44:43.480Z",
+        "id": "632bd9d2d68ae3d224dd0fa5"
+      },
+      {
+        "name": "index.html",
+        "content": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.js\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/addons/p5.sound.min.js\"></script>\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">\n    <meta charset=\"utf-8\" />\n\n  </head>\n  <body>\n    <main>\n    </main>\n    <script src=\"sketch.js\"></script>\n  </body>\n</html>\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "632bd9d2d68ae3d224dd0fa6",
+        "createdAt": "2022-09-22T03:44:43.480Z",
+        "updatedAt": "2022-09-22T03:44:43.480Z",
+        "id": "632bd9d2d68ae3d224dd0fa6"
+      },
+      {
+        "name": "style.css",
+        "content": "html, body {\n  margin: 0;\n  padding: 0;\n}\ncanvas {\n  display: block;\n}\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "632bd9d2d68ae3d224dd0fa7",
+        "createdAt": "2022-09-22T03:44:43.480Z",
+        "updatedAt": "2022-09-22T03:44:43.480Z",
+        "id": "632bd9d2d68ae3d224dd0fa7"
+      }
+    ],
+    "createdAt": "2022-09-22T03:43:31.235Z",
+    "id": "r41Bi8Mm4"
+  },
+  {
+    "_id": "R-Ysx25ft",
+    "name": "Imaginary Creatures",
+    "updatedAt": "2022-10-16T05:23:52.547Z",
+    "files": [
+      {
+        "name": "root",
+        "content": "",
+        "children": [
+          "634a8171f40527cb11eee3e9",
+          "634a8171f40527cb11eee3e8",
+          "634a8171f40527cb11eee3ea"
+        ],
+        "fileType": "folder",
+        "_id": "634a8171f40527cb11eee3eb",
+        "createdAt": "2022-10-16T05:23:52.547Z",
+        "updatedAt": "2022-10-16T05:23:52.547Z",
+        "id": "634a8171f40527cb11eee3eb"
+      },
+      {
+        "name": "sketch.js",
+        "content": "// Code for a bouncing ball animation in p5 Js\nfunction setup() {\n  createCanvas(400, 400);\n  // frameRate(12)\n}\nu = 0\nx = 200\ny = 100\ny_top = 100\nlast_ch = 60\nh = 400\nw = 400\n\nfunction draw() {\n\n  c_w = 60\n  area = PI * 60 * 60\n  g = 9.8\n  dt = 0.03\n  v = u + g * dt\n  y = y + v\n  background(220);\n  min_cw = 24\n  if (y > 0 && y < (h - (last_ch / 2))) {\n    frameRate(60)\n    // falling stage, // squish along the width here\n    squish_factor = 1 - abs(v) / 25\n    c_w = c_w * squish_factor\n    if (c_w < min_cw) {\n      c_w = min_cw\n    }\n    c_h = area / (PI * c_w)\n    last_ch = c_h\n  } else if (y < (h - (min_cw))) {\n    // collision stage, squish on the opposite axis here\n    frameRate(60)\n    c_h = 2 * (h - y)\n    // last_ch = c_h \n    c_w = area / (PI * c_h)\n  }\n  ellipse(x, y + v, c_w, c_h)\n\n  if (y > h - min_cw) {\n    g = -g;\n    v = -v\n  }\n\n  u = v\n\n}",
+        "children": [],
+        "fileType": "file",
+        "_id": "634a8171f40527cb11eee3e8",
+        "isSelectedFile": true,
+        "createdAt": "2022-10-16T05:23:52.547Z",
+        "updatedAt": "2022-10-16T05:23:52.547Z",
+        "id": "634a8171f40527cb11eee3e8"
+      },
+      {
+        "name": "index.html",
+        "content": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.js\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/addons/p5.sound.min.js\"></script>\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">\n    <meta charset=\"utf-8\" />\n\n  </head>\n  <body>\n    <main>\n    </main>\n    <script src=\"sketch.js\"></script>\n  </body>\n</html>\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "634a8171f40527cb11eee3e9",
+        "createdAt": "2022-10-16T05:23:52.547Z",
+        "updatedAt": "2022-10-16T05:23:52.547Z",
+        "id": "634a8171f40527cb11eee3e9"
+      },
+      {
+        "name": "style.css",
+        "content": "html, body {\n  margin: 0;\n  padding: 0;\n}\ncanvas {\n  display: block;\n}\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "634a8171f40527cb11eee3ea",
+        "createdAt": "2022-10-16T05:23:52.547Z",
+        "updatedAt": "2022-10-16T05:23:52.547Z",
+        "id": "634a8171f40527cb11eee3ea"
+      }
+    ],
+    "createdAt": "2022-10-16T05:23:38.782Z",
+    "id": "R-Ysx25ft"
+  },
+  {
+    "_id": "Aw1U2NtB1",
+    "name": "ims1-leo",
+    "updatedAt": "2025-03-20T13:01:51.403Z",
+    "files": [
+      {
+        "name": "root",
+        "content": "",
+        "children": [
+          "634b9584f40527cb11eee3ed",
+          "634b9584f40527cb11eee3ec",
+          "634b9584f40527cb11eee3ee"
+        ],
+        "fileType": "folder",
+        "isSelectedFile": false,
+        "_id": "634b9584f40527cb11eee3ef",
+        "createdAt": "2025-03-20T13:01:51.403Z",
+        "updatedAt": "2025-03-20T13:01:51.403Z",
+        "id": "634b9584f40527cb11eee3ef"
+      },
+      {
+        "name": "sketch.js",
+        "content": "let ang = 0;\n\nfunction setup() {\n  createCanvas(400, 400);\n  colorMode(HSB);\n}\n\nfunction draw() {\n  background(255);\n  for(let i = 1; i <= 13; i ++){\n    fill(map(i, 0, 16, 0, 255), 75, 75)\n    creatureBody(i*25, 200+noise(i+ang)*15, 1);\n  }\n  fill(225, 75, 75)\n  creatureBody(350, 200+noise(14+ang)*15, 1.5);\n  fill(0)\n  textSize(32);\n  text('\\' '+'>'+'\\'', 355, 210+sin(ang)*5+noise(14+ang)*15);\n  ang += 0.07;\n}\n\nlet creatureLeg = (x, y, a)=>{\n  push();\n  \n  translate(x, y);\n  footX = sin(a)*30;\n  ankleX = map(footX, -30, 30, -5, 20);\n  footY = 40;\n  ankleY = map(footX, -30, 30, 2, -3)+20;\n  stroke(0);\n  strokeWeight(4);\n  line(ankleX, ankleY, footX, footY);\n  line(ankleX, ankleY, 0, 0);\n  ellipse(footX, footY, 15, 13);\n  ellipse(ankleX, ankleY, 10, 10);\n  \n  pop();\n}\nlet creatureBody = (x, y, s)=>{\n  push();\n  \n  translate(x, y);\n  stroke(0);\n  strokeWeight(4);\n  ellipse(0, 0-13*(s-1), 50*s, 45*s);\n  creatureLeg(10, 15, ang-PI);\n  creatureLeg(-10, 15, ang);\n  \n  pop();\n}",
+        "children": [],
+        "fileType": "file",
+        "isSelectedFile": true,
+        "_id": "634b9584f40527cb11eee3ec",
+        "createdAt": "2025-03-20T13:01:51.403Z",
+        "updatedAt": "2025-03-20T13:01:51.403Z",
+        "id": "634b9584f40527cb11eee3ec"
+      },
+      {
+        "name": "index.html",
+        "content": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.js\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/addons/p5.sound.min.js\"></script>\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">\n    <meta charset=\"utf-8\" />\n\n  </head>\n  <body>\n    <main>\n    </main>\n    <script src=\"sketch.js\"></script>\n  </body>\n</html>\n",
+        "children": [],
+        "fileType": "file",
+        "isSelectedFile": false,
+        "_id": "634b9584f40527cb11eee3ed",
+        "createdAt": "2025-03-20T13:01:51.403Z",
+        "updatedAt": "2025-03-20T13:01:51.403Z",
+        "id": "634b9584f40527cb11eee3ed"
+      },
+      {
+        "name": "style.css",
+        "content": "html, body {\n  margin: 0;\n  padding: 0;\n}\ncanvas {\n  display: block;\n}\n",
+        "children": [],
+        "fileType": "file",
+        "isSelectedFile": false,
+        "_id": "634b9584f40527cb11eee3ee",
+        "createdAt": "2025-03-20T13:01:51.403Z",
+        "updatedAt": "2025-03-20T13:01:51.403Z",
+        "id": "634b9584f40527cb11eee3ee"
+      }
+    ],
+    "createdAt": "2022-10-16T05:24:28.342Z",
+    "id": "Aw1U2NtB1"
+  },
+  {
+    "_id": "Q1RcC6l1y",
+    "name": "Lacy seatbelt",
+    "updatedAt": "2022-12-11T11:23:59.206Z",
+    "files": [
+      {
+        "name": "root",
+        "content": "",
+        "children": [
+          "639582da4dca1f274f9ec2fd",
+          "639582da4dca1f274f9ec2fc",
+          "639582da4dca1f274f9ec2fe"
+        ],
+        "fileType": "folder",
+        "_id": "639582da4dca1f274f9ec2ff",
+        "createdAt": "2022-12-11T11:23:59.206Z",
+        "updatedAt": "2022-12-11T11:23:59.206Z",
+        "isSelectedFile": false,
+        "id": "639582da4dca1f274f9ec2ff"
+      },
+      {
+        "name": "sketch.js",
+        "content": "let interval = 10;\n\nfunction setup() {\n  createCanvas(400, 400);\n  colorMode(HSB);\n  cBg = new checkerBg(10);\n  cBg.startUpdate();\n}\n\nfunction draw() {\n  background(255);\n  cBg.display();\n}\n\nclass checkerBg {\n  constructor(interval) {\n    this.interval = interval;\n    this.checkerArray = [];\n    for (let i = 0; i < width; i += width / interval) {\n      for (let j = 0; j < height; j += height / interval) {\n        this.checkerArray.push(\n          new checker(i, j, width / interval, height / interval)\n        );\n      }\n    }\n  }\n  display() {\n    this.checkerArray.map((element) => {\n      element.display();\n    });\n  }\n  startUpdate() {\n    this.checkerArray.map((element) => {\n      element.update();\n    });\n  }\n}\n\nclass checker {\n  constructor(x, y, w, h) {\n    this.color = color(random(360), 75, 75);\n    this.x = x;\n    this.y = y;\n    this.w = w;\n    this.h = h;\n  }\n  display() {\n    fill(this.color);\n    strokeWeight(10);\n    stroke(255);\n    rect(this.x, this.y, this.w, this.h);\n  }\n  update() {\n    this.color = color(random(360), 60, 75);\n    setTimeout(() => {\n      this.update();\n    }, 200);\n  }\n}\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "639582da4dca1f274f9ec2fc",
+        "isSelectedFile": true,
+        "createdAt": "2022-12-11T11:23:59.206Z",
+        "updatedAt": "2022-12-11T11:23:59.206Z",
+        "id": "639582da4dca1f274f9ec2fc"
+      },
+      {
+        "name": "index.html",
+        "content": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/addons/p5.sound.min.js\"></script>\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">\n    <meta charset=\"utf-8\" />\n\n  </head>\n  <body>\n    <main>\n    </main>\n    <script src=\"sketch.js\"></script>\n  </body>\n</html>\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "639582da4dca1f274f9ec2fd",
+        "createdAt": "2022-12-11T11:23:59.206Z",
+        "updatedAt": "2022-12-11T11:23:59.206Z",
+        "isSelectedFile": false,
+        "id": "639582da4dca1f274f9ec2fd"
+      },
+      {
+        "name": "style.css",
+        "content": "html, body {\n  margin: 0;\n  padding: 0;\n}\ncanvas {\n  display: block;\n}\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "639582da4dca1f274f9ec2fe",
+        "createdAt": "2022-12-11T11:23:59.206Z",
+        "updatedAt": "2022-12-11T11:23:59.206Z",
+        "isSelectedFile": false,
+        "id": "639582da4dca1f274f9ec2fe"
+      }
+    ],
+    "createdAt": "2022-12-11T07:12:31.353Z",
+    "id": "Q1RcC6l1y"
+  },
+  {
+    "_id": "vxE7cGnh2",
+    "name": "LIFE",
+    "updatedAt": "2022-11-10T03:13:03.186Z",
+    "files": [
+      {
+        "name": "root",
+        "content": "",
+        "children": [
+          "6354bbf2933c20410a091bfa",
+          "6363d7f6b337b8001a80a3de",
+          "6354bbf2933c20410a091bf9",
+          "6369ee059bfd20001caa8adc",
+          "6354bbf2933c20410a091bfb"
+        ],
+        "fileType": "folder",
+        "_id": "6354bbf2933c20410a091bfc",
+        "createdAt": "2022-11-10T03:13:03.186Z",
+        "updatedAt": "2022-11-10T03:13:03.186Z",
+        "isSelectedFile": false,
+        "id": "6354bbf2933c20410a091bfc"
+      },
+      {
+        "name": "sketch.js",
+        "content": "//board consts\nconst COLUMNS = 300;\nconst ROWS = 300;\n\n//canvas consts\nconst CANVAS_WIDTH = 400;\nconst CANVAS_HEIGHT = 400;\n\n//board arrays\nlet board;\nlet next;\n\n//contorl\nlet scaleSlider = document.getElementById(\"scaleRange\");\nlet paintButton = document.getElementById(\"paintButton\");\nlet joyStick;\n\n//display related\nconst CHECKBOX_WIDTH = 5;\n\n//app state true = \"ON\", false = \"PAINT\"\nlet appState = false;\n\n//timing\nconst DEFAULT_INTERVAL = (1 / 120) * 20000;\n\nfunction preload() {}\n\nfunction setup() {\n  createCanvas(CANVAS_WIDTH, CANVAS_HEIGHT);\n  frameRate(60);\n  colorMode(HSB);\n  // Make the board\n  board = new Array(COLUMNS);\n  for (let i = 0; i < COLUMNS; i++) {\n    board[i] = new Array(ROWS);\n  }\n  // Make the temp board for swapping\n  next = new Array(COLUMNS);\n  for (let i = 0; i < COLUMNS; i++) {\n    next[i] = new Array(ROWS);\n  }\n\n  for (let xi = 0; xi < COLUMNS - 1; xi++) {\n    for (let yi = 0; yi < ROWS - 1; yi++) {\n      board[xi][yi] = random([true, false]);\n    }\n  }\n\n  checkerBoard = new checkerBoard();\n  updateBoard();\n\n  joyStick = new JoyStick(\"joyDiv\", {\n    // The ID of canvas element\n    title: \"joystick\",\n    // width/height\n    width: 80,\n    height: 80,\n    // Internal color of Stick\n    internalFillColor: \"#f0003c\",\n    // Border width of Stick\n    internalLineWidth: 2,\n    // Border color of Stick\n    internalStrokeColor: \"#ffffff\",\n    // External reference circonference width\n    externalLineWidth: 1,\n    //External reference circonference color\n    externalStrokeColor: \"#f0003c\",\n    // Sets the behavior of the stick\n    autoReturnToCenter: true,\n  });\n\n  paintButton.onclick = () => {\n    appState = !appState;\n  };\n}\n\nfunction draw() {\n  background(221, 18, 30);\n  checkerBoard.display();\n  checkerBoard.scale = scaleSlider.value;\n  checkerBoard.driftX -= joyStick.GetPosX() - 40;\n  checkerBoard.driftY -= joyStick.GetPosY() - 40;\n  drawingContext.shadowBlur = 10;\n  drawingContext.shadowColor = color(254, 100, 30);\n  chromaticAberration(drawingContext, 3, 0);\n}\n\n// From https://p5js.org/examples/simulate-game-of-life.html p5.js example game of life\n// The process of creating the new generation\nfunction generate() {\n  // Loop through every spot in our 2D array and check spots neighbors\n  for (let x = 1; x < COLUMNS - 1; x++) {\n    for (let y = 1; y < ROWS - 1; y++) {\n      // Add up all the states in a 3x3 surrounding grid\n      let neighbors = 0;\n      for (let i = -1; i <= 1; i++) {\n        for (let j = -1; j <= 1; j++) {\n          neighbors += board[x + i][y + j];\n        }\n      }\n\n      // A little trick to subtract the current cell's state since\n      // we added it in the above loop\n      neighbors -= board[x][y];\n      // Rules of Life\n      if (board[x][y] == 1 && neighbors < 2) next[x][y] = 0;\n      // Loneliness\n      else if (board[x][y] == 1 && neighbors > 3) next[x][y] = 0;\n      // Overpopulation\n      else if (board[x][y] == 0 && neighbors == 3) next[x][y] = 1;\n      // Reproduction\n      else next[x][y] = board[x][y]; // Stasis\n    }\n  }\n\n  // Swap!\n  let temp = board;\n  board = next;\n  next = temp;\n}\n\n//update function\nfunction updateBoard() {\n  setTimeout(updateBoard, DEFAULT_INTERVAL);\n  if (!appState) {\n    return;\n  }\n  generate();\n  checkerBoard.update();\n}\n\nfunction mousePressed() {\n  if (\n    (mouseX < 110 && mouseY > 270) ||\n    (mouseX > 250 && mouseY > 325) ||\n    mouseX < 5 ||\n    mouseY < 5 ||\n    mouseX > CANVAS_WIDTH - 5 ||\n    mouseY > CANVAS_HEIGHT - 5\n  ) {\n    return;\n  }\n\n  if (appState) {\n    return;\n  }\n\n  let xi = parseInt(\n    (mouseX -\n      checkerBoard.driftX +\n      ((COLUMNS - 1) * CHECKBOX_WIDTH * checkerBoard.scale) / 2 -\n      CANVAS_WIDTH / 2) /\n      (CHECKBOX_WIDTH * checkerBoard.scale)\n  );\n\n  let yi = parseInt(\n    (mouseY -\n      checkerBoard.driftY +\n      ((ROWS - 1) * CHECKBOX_WIDTH * checkerBoard.scale) / 2 -\n      CANVAS_HEIGHT / 2) /\n      (CHECKBOX_WIDTH * checkerBoard.scale)\n  );\n\n  if (xi < 0 || yi < 0 || xi > 299 || yi > 299) {\n    return;\n  }\n\n  board[xi][yi] = !board[xi][yi];\n  checkerBoard.update();\n  //console.log(xi, yi, board[xi][yi]);\n}\n\n// Define the check board\nclass checkerBoard {\n  constructor() {\n    this.checkBoxArr = new Array(COLUMNS);\n    for (let xi = 0; xi < COLUMNS - 1; xi++) {\n      this.checkBoxArr[xi] = new Array(ROWS);\n      for (let yi = 0; yi < ROWS - 1; yi++) {\n        this.checkBoxArr[xi][yi] = new checkBox(xi, yi);\n        if (xi == 0 || xi == 298 || yi == 0 || yi == 298) {\n          this.checkBoxArr[xi][yi].isBound = true;\n        }\n      }\n    }\n    this.driftX = 0;\n    this.driftY = 0;\n    this.scale = 1;\n  }\n\n  display() {\n    push();\n    translate(\n      CANVAS_WIDTH / 2 -\n        ((COLUMNS - 1) * CHECKBOX_WIDTH * this.scale) / 2 +\n        this.driftX,\n      CANVAS_HEIGHT / 2 -\n        ((ROWS - 1) * CHECKBOX_WIDTH * this.scale) / 2 +\n        this.driftY\n    );\n    scale(this.scale);\n    noStroke();\n    for (let xi = 0; xi < COLUMNS - 1; xi++) {\n      for (let yi = 0; yi < ROWS - 1; yi++) {\n        this.checkBoxArr[xi][yi].display();\n      }\n    }\n    pop();\n  }\n\n  update() {\n    for (let xi = 0; xi < COLUMNS - 1; xi++) {\n      for (let yi = 0; yi < ROWS - 1; yi++) {\n        this.checkBoxArr[xi][yi].toggle(board[xi][yi]);\n      }\n    }\n  }\n}\n\n// Define the check box.\nclass checkBox {\n  //constructor\n  constructor(xIndex, yIndex, alive = false) {\n    this.x = xIndex * CHECKBOX_WIDTH;\n    this.y = yIndex * CHECKBOX_WIDTH;\n    this.alive = alive;\n    this.shade = random(60, 87);\n    //this.pressActive = pressActive;\n    this.isBound = false;\n  }\n\n  display() {\n    if (!this.isBound) {\n      if (this.alive) {\n        fill(51, 80, this.shade);\n      } else {\n        noFill();\n      }\n      circle(this.x, this.y, CHECKBOX_WIDTH);\n    } else {\n      fill(0, 255, 255);\n      circle(this.x, this.y, CHECKBOX_WIDTH);\n    }\n  }\n\n  toggle(isAlive) {\n    this.alive = isAlive;\n  }\n}\n\nfunction chromaticAberration(ctx, intensity, phase) {\n  /* Use canvas to draw the original image, and load pixel data by calling getImageData\n    The ImageData.data is an one-dimentional Uint8Array with all the color elements flattened. The array contains data in the sequence of [r,g,b,a,r,g,b,a...]\n    Because of the cross-origin issue, remember to run the demo in a localhost server or the getImageData call will throw error\n    */\n  var imageData = ctx.getImageData(0, 0, 800, 800);\n  var data = imageData.data;\n\n  for (var i = phase % 4; i < data.length; i += 4) {\n    // Setting the start of the loop to a different integer will change the aberration color, but a start integer of 4n-1 will not work\n    data[i] = data[i + 4 * intensity];\n  }\n  ctx.putImageData(imageData, 0, 0);\n}\n\nlet clearBoard = () =>{\n  for (let xi = 0; xi < COLUMNS - 1; xi++) {\n    for (let yi = 0; yi < ROWS - 1; yi++) {\n      board[xi][yi] = false;\n    }\n  }\n  checkerBoard.update();\n}\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "6354bbf2933c20410a091bf9",
+        "isSelectedFile": true,
+        "createdAt": "2022-11-10T03:13:03.186Z",
+        "updatedAt": "2022-11-10T03:13:03.186Z",
+        "id": "6354bbf2933c20410a091bf9"
+      },
+      {
+        "name": "index.html",
+        "content": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.js\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/addons/p5.sound.min.js\"></script>\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\" />\n    <meta charset=\"utf-8\" />\n  </head>\n  <body>\n    <main></main>\n    <div class=\"overlay\" id=\"splash\">\n      <h1 id=\"msg\">Welcome to Conway's Game of Life.</h1>\n    </div>\n\n    <div class=\"overlay\" id=\"overlay\">\n      <div id=\"joyDiv\"></div>\n      <input\n        type=\"range\"\n        min=\"0.5\"\n        max=\"2\"\n        value=\"1.25\"\n        step=\"0.01\"\n        class=\"slider\"\n        id=\"scaleRange\"\n      />\n      <button class=\"button-82-pushable\" role=\"button\" id=\"paintButton\">\n        <span class=\"button-82-shadow\"></span>\n        <span class=\"button-82-edge\"></span>\n        <span class=\"button-82-front text\"> GOD MODE </span>\n      </button>\n    </div>\n    <script src=\"sketch.js\"></script>\n    <script src=\"joy.js\"></script>\n    <script src=\"splash.js\"></script>\n  </body>\n</html>\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "6354bbf2933c20410a091bfa",
+        "createdAt": "2022-11-10T03:13:03.186Z",
+        "updatedAt": "2022-11-10T03:13:03.186Z",
+        "isSelectedFile": false,
+        "id": "6354bbf2933c20410a091bfa"
+      },
+      {
+        "name": "style.css",
+        "content": "html,\nbody {\n  margin: 0;\n  padding: 0;\n}\ncanvas {\n  display: block;\n}\n\n.overlay {\n  width: 400px;\n  height: 400px;\n  position: absolute;\n  top: 0px;\n  left: 0px;\n}\n\nh2{\n  font-family: Arial, Helvetica, sans-serif;\n  padding: 25px 25px 75px;\n  color:#f0003c;\n}\n\nh1{\n  font-family: Arial, Helvetica, sans-serif;\n  padding: 25px 25px 75px;\n  color: #f0003c;\n}\n\n#overlay {\n  z-index: 100;\n}\n\n#splash {\n  z-index: 105;\n  background-color: #40434c;\n}\n\n#controlInfo{\n  padding: 150px 25px 25px;\n}\n\n/* From W3Schools https://www.w3schools.com/howto/howto_js_rangeslider.asp*/\n/* The slider itself */\n.slider {\n  -webkit-appearance: none; /* Override default CSS styles */\n  appearance: none;\n  height: 5px; /* Specified height */\n  border-radius: 5px;\n  background: #f0003c;\n  outline: none; /* Remove outline */\n  opacity: 0.8; /* Set transparency (for mouse-over effects on hover) */\n  -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */\n  transition: opacity 0.2s;\n}\n\n/* Mouse-over effects */\n.slider:hover {\n  opacity: 1; /* Fully shown on mouse-over */\n}\n\n/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */\n.slider::-webkit-slider-thumb {\n  -webkit-appearance: none; /* Override default look */\n  appearance: none;\n  width: 15px; /* Set a specific slider handle width */\n  height: 15px; /* Slider handle height */\n  border-radius: 50%;\n  background: #f0003c;\n  cursor: pointer; /* Cursor on hover */\n}\n\n.slider::-moz-range-thumb {\n  width: 15px; /* Set a specific slider handle width */\n  height: 15px; /* Slider handle height */\n  border-radius: 50%;\n  background: #f0003c;\n  cursor: pointer; /* Cursor on hover */\n}\n\n/* From CSS Scan https://getcssscan.com/css-buttons-examples */\n/* CSS */\n.button-82-pushable {\n  position: relative;\n  border: none;\n  background: transparent;\n  padding: 0;\n  cursor: pointer;\n  outline-offset: 4px;\n  transition: filter 250ms;\n  user-select: none;\n  -webkit-user-select: none;\n  touch-action: manipulation;\n}\n\n.button-82-shadow {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  border-radius: 12px;\n  background: hsl(0deg 0% 0% / 0.25);\n  will-change: transform;\n  transform: translateY(2px);\n  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);\n}\n\n.button-82-edge {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  border-radius: 12px;\n  background: linear-gradient(\n    to left,\n    hsl(340deg 100% 16%) 0%,\n    hsl(340deg 100% 32%) 8%,\n    hsl(340deg 100% 32%) 92%,\n    hsl(340deg 100% 16%) 100%\n  );\n}\n\n.button-82-front {\n  display: block;\n  position: relative;\n  padding: 12px 27px;\n  border-radius: 12px;\n  font-size: 1.1rem;\n  font-weight: bold;\n  color: white;\n  background: #f0003c;\n  will-change: transform;\n  transform: translateY(-4px);\n  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);\n}\n\n@media (min-width: 768px) {\n  .button-82-front {\n    font-size: 1.25rem;\n    padding: 12px 42px;\n  }\n}\n\n.button-82-pushable:hover {\n  filter: brightness(110%);\n  -webkit-filter: brightness(110%);\n}\n\n.button-82-pushable:hover .button-82-front {\n  transform: translateY(-6px);\n  transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);\n}\n\n.button-82-pushable:active .button-82-front {\n  transform: translateY(-2px);\n  transition: transform 34ms;\n}\n\n.button-82-pushable:hover .button-82-shadow {\n  transform: translateY(4px);\n  transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);\n}\n\n.button-82-pushable:active .button-82-shadow {\n  transform: translateY(1px);\n  transition: transform 34ms;\n}\n\n.button-82-pushable:focus:not(:focus-visible) {\n  outline: none;\n}\n#joyDiv {\n  position: absolute;\n  bottom: 17px;\n  left: 18px;\n}\n\n#scaleRange {\n  width: 80px; /* Full-width */\n  position: absolute;\n  bottom: 110px;\n  left: 17px;\n}\n\n#paintButton {\n  position: absolute;\n  bottom: 20px;\n  right: 20px;\n}\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "6354bbf2933c20410a091bfb",
+        "createdAt": "2022-11-10T03:13:03.186Z",
+        "updatedAt": "2022-11-10T03:13:03.186Z",
+        "isSelectedFile": false,
+        "id": "6354bbf2933c20410a091bfb"
+      },
+      {
+        "name": "joy.js",
+        "content": "/*\n * Name          : joy.js\n * @author       : Roberto D'Amico (Bobboteck)\n * Last modified : 09.06.2020\n * Revision      : 1.1.6\n *\n * Modification History:\n * Date         Version     Modified By     Description\n * 2021-12-21   2.0.0       Roberto D'Amico New version of the project that integrates the callback functions, while\n *                                          maintaining compatibility with previous versions. Fixed Issue #27 too,\n *                                          thanks to @artisticfox8 for the suggestion.\n * 2020-06-09   1.1.6       Roberto D'Amico Fixed Issue #10 and #11\n * 2020-04-20   1.1.5       Roberto D'Amico Correct: Two sticks in a row, thanks to @liamw9534 for the suggestion\n * 2020-04-03               Roberto D'Amico Correct: InternalRadius when change the size of canvas, thanks to\n *                                          @vanslipon for the suggestion\n * 2020-01-07   1.1.4       Roberto D'Amico Close #6 by implementing a new parameter to set the functionality of\n *                                          auto-return to 0 position\n * 2019-11-18   1.1.3       Roberto D'Amico Close #5 correct indication of East direction\n * 2019-11-12   1.1.2       Roberto D'Amico Removed Fix #4 incorrectly introduced and restored operation with touch\n *                                          devices\n * 2019-11-12   1.1.1       Roberto D'Amico Fixed Issue #4 - Now JoyStick work in any position in the page, not only\n *                                          at 0,0\n *\n * The MIT License (MIT)\n *\n *  This file is part of the JoyStick Project (https://github.com/bobboteck/JoyStick).\n *\tCopyright (c) 2015 Roberto D'Amico (Bobboteck).\n *\n * Permission is hereby granted, free of charge, to any person obtaining a copy\n * of this software and associated documentation files (the \"Software\"), to deal\n * in the Software without restriction, including without limitation the rights\n * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\n * copies of the Software, and to permit persons to whom the Software is\n * furnished to do so, subject to the following conditions:\n *\n * The above copyright notice and this permission notice shall be included in all\n * copies or substantial portions of the Software.\n *\n * THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\n * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\n * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\n * SOFTWARE.\n */\n\nlet StickStatus = {\n  xPosition: 0,\n  yPosition: 0,\n  x: 0,\n  y: 0,\n  cardinalDirection: \"C\",\n};\n\n/**\n * @desc Principal object that draw a joystick, you only need to initialize the object and suggest the HTML container\n * @costructor\n * @param container {String} - HTML object that contains the Joystick\n * @param parameters (optional) - object with following keys:\n *  title {String} (optional) - The ID of canvas (Default value is 'joystick')\n *  width {Int} (optional) - The width of canvas, if not specified is setted at width of container object (Default value is the width of container object)\n *  height {Int} (optional) - The height of canvas, if not specified is setted at height of container object (Default value is the height of container object)\n *  internalFillColor {String} (optional) - Internal color of Stick (Default value is '#00AA00')\n *  internalLineWidth {Int} (optional) - Border width of Stick (Default value is 2)\n *  internalStrokeColor {String}(optional) - Border color of Stick (Default value is '#003300')\n *  externalLineWidth {Int} (optional) - External reference circonference width (Default value is 2)\n *  externalStrokeColor {String} (optional) - External reference circonference color (Default value is '#008000')\n *  autoReturnToCenter {Bool} (optional) - Sets the behavior of the stick, whether or not, it should return to zero position when released (Default value is True and return to zero)\n * @param callback {StickStatus} -\n */\nvar JoyStick = function (container, parameters, callback) {\n  parameters = parameters || {};\n  var title =\n      typeof parameters.title === \"undefined\" ? \"joystick\" : parameters.title,\n    width = typeof parameters.width === \"undefined\" ? 0 : parameters.width,\n    height = typeof parameters.height === \"undefined\" ? 0 : parameters.height,\n    internalFillColor =\n      typeof parameters.internalFillColor === \"undefined\"\n        ? \"#00AA00\"\n        : parameters.internalFillColor,\n    internalLineWidth =\n      typeof parameters.internalLineWidth === \"undefined\"\n        ? 2\n        : parameters.internalLineWidth,\n    internalStrokeColor =\n      typeof parameters.internalStrokeColor === \"undefined\"\n        ? \"#003300\"\n        : parameters.internalStrokeColor,\n    externalLineWidth =\n      typeof parameters.externalLineWidth === \"undefined\"\n        ? 2\n        : parameters.externalLineWidth,\n    externalStrokeColor =\n      typeof parameters.externalStrokeColor === \"undefined\"\n        ? \"#008000\"\n        : parameters.externalStrokeColor,\n    autoReturnToCenter =\n      typeof parameters.autoReturnToCenter === \"undefined\"\n        ? true\n        : parameters.autoReturnToCenter;\n\n  callback = callback || function (StickStatus) {};\n\n  // Create Canvas element and add it in the Container object\n  var objContainer = document.getElementById(container);\n\n  // Fixing Unable to preventDefault inside passive event listener due to target being treated as passive in Chrome [Thanks to https://github.com/artisticfox8 for this suggestion]\n  objContainer.style.touchAction = \"none\";\n\n  var canvas = document.createElement(\"canvas\");\n  canvas.id = title;\n  if (width === 0) {\n    width = objContainer.clientWidth;\n  }\n  if (height === 0) {\n    height = objContainer.clientHeight;\n  }\n  canvas.width = width;\n  canvas.height = height;\n  objContainer.appendChild(canvas);\n  var context = canvas.getContext(\"2d\");\n\n  var pressed = 0; // Bool - 1=Yes - 0=No\n  var circumference = 2 * Math.PI;\n  var internalRadius = 9;\n  var maxMoveStick = internalRadius + 5;\n  var externalRadius = internalRadius + 30;\n  var centerX = canvas.width / 2;\n  var centerY = canvas.height / 2;\n  var directionHorizontalLimitPos = canvas.width / 10;\n  var directionHorizontalLimitNeg = directionHorizontalLimitPos * -1;\n  var directionVerticalLimitPos = canvas.height / 10;\n  var directionVerticalLimitNeg = directionVerticalLimitPos * -1;\n  // Used to save current position of stick\n  var movedX = centerX;\n  var movedY = centerY;\n\n  // Check if the device support the touch or not\n  if (\"ontouchstart\" in document.documentElement) {\n    canvas.addEventListener(\"touchstart\", onTouchStart, false);\n    document.addEventListener(\"touchmove\", onTouchMove, false);\n    document.addEventListener(\"touchend\", onTouchEnd, false);\n  } else {\n    canvas.addEventListener(\"mousedown\", onMouseDown, false);\n    document.addEventListener(\"mousemove\", onMouseMove, false);\n    document.addEventListener(\"mouseup\", onMouseUp, false);\n  }\n  // Draw the object\n  drawExternal();\n  drawInternal();\n\n  /******************************************************\n   * Private methods\n   *****************************************************/\n\n  /**\n   * @desc Draw the external circle used as reference position\n   */\n  function drawExternal() {\n    context.beginPath();\n    context.arc(centerX, centerY, externalRadius, 0, circumference, false);\n    context.lineWidth = externalLineWidth;\n    context.strokeStyle = externalStrokeColor;\n    context.stroke();\n  }\n\n  /**\n   * @desc Draw the internal stick in the current position the user have moved it\n   */\n  function drawInternal() {\n    context.beginPath();\n    if (movedX < internalRadius) {\n      movedX = maxMoveStick;\n    }\n    if (movedX + internalRadius > canvas.width) {\n      movedX = canvas.width - maxMoveStick;\n    }\n    if (movedY < internalRadius) {\n      movedY = maxMoveStick;\n    }\n    if (movedY + internalRadius > canvas.height) {\n      movedY = canvas.height - maxMoveStick;\n    }\n    context.arc(movedX, movedY, internalRadius, 0, circumference, false);\n    // create radial gradient\n    var grd = context.createRadialGradient(\n      centerX,\n      centerY,\n      5,\n      centerX,\n      centerY,\n      200\n    );\n    // Light color\n    grd.addColorStop(0, internalFillColor);\n    // Dark color\n    grd.addColorStop(1, internalStrokeColor);\n    context.fillStyle = grd;\n    context.fill();\n    context.lineWidth = internalLineWidth;\n    context.strokeStyle = internalStrokeColor;\n    context.stroke();\n  }\n\n  /**\n   * @desc Events for manage touch\n   */\n  function onTouchStart(event) {\n    pressed = 1;\n  }\n\n  function onTouchMove(event) {\n    if (pressed === 1 && event.targetTouches[0].target === canvas) {\n      movedX = event.targetTouches[0].pageX;\n      movedY = event.targetTouches[0].pageY;\n      // Manage offset\n      if (canvas.offsetParent.tagName.toUpperCase() === \"BODY\") {\n        movedX -= canvas.offsetLeft;\n        movedY -= canvas.offsetTop;\n      } else {\n        movedX -= canvas.offsetParent.offsetLeft;\n        movedY -= canvas.offsetParent.offsetTop;\n      }\n      // Delete canvas\n      context.clearRect(0, 0, canvas.width, canvas.height);\n      // Redraw object\n      drawExternal();\n      drawInternal();\n\n      // Set attribute of callback\n      StickStatus.xPosition = movedX;\n      StickStatus.yPosition = movedY;\n      StickStatus.x = (100 * ((movedX - centerX) / maxMoveStick)).toFixed();\n      StickStatus.y = (\n        100 *\n        ((movedY - centerY) / maxMoveStick) *\n        -1\n      ).toFixed();\n      StickStatus.cardinalDirection = getCardinalDirection();\n      callback(StickStatus);\n    }\n  }\n\n  function onTouchEnd(event) {\n    pressed = 0;\n    // If required reset position store variable\n    if (autoReturnToCenter) {\n      movedX = centerX;\n      movedY = centerY;\n    }\n    // Delete canvas\n    context.clearRect(0, 0, canvas.width, canvas.height);\n    // Redraw object\n    drawExternal();\n    drawInternal();\n\n    // Set attribute of callback\n    StickStatus.xPosition = movedX;\n    StickStatus.yPosition = movedY;\n    StickStatus.x = (100 * ((movedX - centerX) / maxMoveStick)).toFixed();\n    StickStatus.y = (100 * ((movedY - centerY) / maxMoveStick) * -1).toFixed();\n    StickStatus.cardinalDirection = getCardinalDirection();\n    callback(StickStatus);\n  }\n\n  /**\n   * @desc Events for manage mouse\n   */\n  function onMouseDown(event) {\n    pressed = 1;\n  }\n\n  /* To simplify this code there was a new experimental feature here: https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/offsetX , but it present only in Mouse case not metod presents in Touch case :-( */\n  function onMouseMove(event) {\n    if (pressed === 1) {\n      movedX = event.pageX;\n      movedY = event.pageY;\n      // Manage offset\n      if (canvas.offsetParent.tagName.toUpperCase() === \"BODY\") {\n        movedX -= canvas.offsetLeft;\n        movedY -= canvas.offsetTop;\n      } else {\n        movedX -= canvas.offsetParent.offsetLeft;\n        movedY -= canvas.offsetParent.offsetTop;\n      }\n      // Delete canvas\n      context.clearRect(0, 0, canvas.width, canvas.height);\n      // Redraw object\n      drawExternal();\n      drawInternal();\n\n      // Set attribute of callback\n      StickStatus.xPosition = movedX;\n      StickStatus.yPosition = movedY;\n      StickStatus.x = (100 * ((movedX - centerX) / maxMoveStick)).toFixed();\n      StickStatus.y = (\n        100 *\n        ((movedY - centerY) / maxMoveStick) *\n        -1\n      ).toFixed();\n      StickStatus.cardinalDirection = getCardinalDirection();\n      callback(StickStatus);\n    }\n  }\n\n  function onMouseUp(event) {\n    pressed = 0;\n    // If required reset position store variable\n    if (autoReturnToCenter) {\n      movedX = centerX;\n      movedY = centerY;\n    }\n    // Delete canvas\n    context.clearRect(0, 0, canvas.width, canvas.height);\n    // Redraw object\n    drawExternal();\n    drawInternal();\n\n    // Set attribute of callback\n    StickStatus.xPosition = movedX;\n    StickStatus.yPosition = movedY;\n    StickStatus.x = (100 * ((movedX - centerX) / maxMoveStick)).toFixed();\n    StickStatus.y = (100 * ((movedY - centerY) / maxMoveStick) * -1).toFixed();\n    StickStatus.cardinalDirection = getCardinalDirection();\n    callback(StickStatus);\n  }\n\n  function getCardinalDirection() {\n    let result = \"\";\n    let orizontal = movedX - centerX;\n    let vertical = movedY - centerY;\n\n    if (\n      vertical >= directionVerticalLimitNeg &&\n      vertical <= directionVerticalLimitPos\n    ) {\n      result = \"C\";\n    }\n    if (vertical < directionVerticalLimitNeg) {\n      result = \"N\";\n    }\n    if (vertical > directionVerticalLimitPos) {\n      result = \"S\";\n    }\n\n    if (orizontal < directionHorizontalLimitNeg) {\n      if (result === \"C\") {\n        result = \"W\";\n      } else {\n        result += \"W\";\n      }\n    }\n    if (orizontal > directionHorizontalLimitPos) {\n      if (result === \"C\") {\n        result = \"E\";\n      } else {\n        result += \"E\";\n      }\n    }\n\n    return result;\n  }\n\n  /******************************************************\n   * Public methods\n   *****************************************************/\n\n  /**\n   * @desc The width of canvas\n   * @return Number of pixel width\n   */\n  this.GetWidth = function () {\n    return canvas.width;\n  };\n\n  /**\n   * @desc The height of canvas\n   * @return Number of pixel height\n   */\n  this.GetHeight = function () {\n    return canvas.height;\n  };\n\n  /**\n   * @desc The X position of the cursor relative to the canvas that contains it and to its dimensions\n   * @return Number that indicate relative position\n   */\n  this.GetPosX = function () {\n    return movedX;\n  };\n\n  /**\n   * @desc The Y position of the cursor relative to the canvas that contains it and to its dimensions\n   * @return Number that indicate relative position\n   */\n  this.GetPosY = function () {\n    return movedY;\n  };\n\n  /**\n   * @desc Normalizzed value of X move of stick\n   * @return Integer from -100 to +100\n   */\n  this.GetX = function () {\n    return (100 * ((movedX - centerX) / maxMoveStick)).toFixed();\n  };\n\n  /**\n   * @desc Normalizzed value of Y move of stick\n   * @return Integer from -100 to +100\n   */\n  this.GetY = function () {\n    return (100 * ((movedY - centerY) / maxMoveStick) * -1).toFixed();\n  };\n\n  /**\n   * @desc Get the direction of the cursor as a string that indicates the cardinal points where this is oriented\n   * @return String of cardinal point N, NE, E, SE, S, SW, W, NW and C when it is placed in the center\n   */\n  this.GetDir = function () {\n    return getCardinalDirection();\n  };\n};\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "6363d7f6b337b8001a80a3de",
+        "isSelectedFile": false,
+        "updatedAt": "2022-11-10T03:13:03.186Z",
+        "createdAt": "2022-11-10T03:13:03.186Z",
+        "id": "6363d7f6b337b8001a80a3de"
+      },
+      {
+        "name": "splash.js",
+        "content": "const TIME = 2000;\n\nlet splashScreen = document.getElementById(\"splash\");\n\nsetTimeout(() => {\n  splashScreen.innerHTML = \"<h2> Slider -> Scaling </br> Joystick -> Move around </br> God Mode -> Decide each cell's fate.</h2>\"\n}, 2*TIME);\n\nsetTimeout(() => {\n  splashScreen.innerHTML = \"<h2>Can you find them? </br> Block, Beehive, Blinker, Glider</h2>\"\n}, 4*TIME);\n\nsetTimeout(() => {\n  splashScreen.remove();\n  appState = true;\n}, 6*TIME);\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "6369ee059bfd20001caa8adc",
+        "isSelectedFile": false,
+        "updatedAt": "2022-11-10T03:13:03.186Z",
+        "createdAt": "2022-11-10T03:13:03.186Z",
+        "id": "6369ee059bfd20001caa8adc"
+      }
+    ],
+    "createdAt": "2022-10-23T03:58:52.253Z",
+    "id": "vxE7cGnh2"
+  },
+  {
+    "_id": "ctwhPZYf-",
+    "name": "Mini Project 1",
+    "updatedAt": "2022-09-29T03:48:49.986Z",
+    "files": [
+      {
+        "name": "root",
+        "content": "",
+        "children": [
+          "6327dd778f7ac7a17d19e0be",
+          "6327dd778f7ac7a17d19e0bd",
+          "6327dd778f7ac7a17d19e0bf"
+        ],
+        "fileType": "folder",
+        "_id": "6327dd778f7ac7a17d19e0c0",
+        "createdAt": "2022-09-29T03:48:49.986Z",
+        "updatedAt": "2022-09-29T03:48:49.986Z",
+        "isSelectedFile": false,
+        "id": "6327dd778f7ac7a17d19e0c0"
+      },
+      {
+        "name": "sketch.js",
+        "content": "let currentX = 100;\nlet currentY = 100;\nlet currentHue = 0;\nlet hueAdding = true;\nlet directions = ['up','down','left','right'];\nlet cDirection = \"left\";\nconst cVelocity = 1;\n\nlet heartShape = (x, y, size)=>{\n  //From the p5.js example\n  beginShape();\n  vertex(x, y);\n  bezierVertex(x - size / 2, y - size / 2, x - size, y + size / 3, x, y + size);\n  bezierVertex(x + size, y + size / 3, x + size / 2, y - size / 2, x, y);\n  endShape(CLOSE);\n}\n\nlet setNewLocation = ()=>{\n  switch(cDirection) {\n    case 'up':\n      currentX += cVelocity;\n      break;\n    case 'down':\n      currentX -= cVelocity;\n      break;\n    case 'left':\n      currentY -= cVelocity;\n      break;\n    case 'right':\n      currentY += cVelocity;\n      break;\n  }\n}\n\nlet addNewShape = ()=>{\n  setNewLocation();\n  let x = currentX;\n  let y = currentY;\n  if(hueAdding == true){\n    currentHue += 5\n  }else{\n    currentHue -= 5\n  }\n  let h = currentHue\n  strokeWeight(4);\n  stroke(10);\n  fill(h,91,96);\n  heartShape(x,y,25);\n}\n\nfunction setup() {\n  createCanvas(400, 400);\n  colorMode(HSB);\n  setInterval(()=>{cDirection = random(directions)},1000);\n}\n\nfunction draw() {\n  background(255);\n  if(currentX <= 0 || currentX >= 400 || currentY <= 0 || currentY >= 400){\n    if(currentX <= 0){ cDirection =  }\n    if(currentX >= 400){ currentX -= cVelocity }\n    if(currentY <= 0){ currentY += cVelocity }\n    if(currentY >= 400){ currentY -= cVelocity }\n    return;\n  }\n  addNewShape();\n  if(currentHue >= 360){\n    hueAdding = false\n  }\n  if(currentHue <= 0){\n    hueAdding = true\n  }\n}",
+        "children": [],
+        "fileType": "file",
+        "_id": "6327dd778f7ac7a17d19e0bd",
+        "isSelectedFile": true,
+        "createdAt": "2022-09-29T03:48:49.986Z",
+        "updatedAt": "2022-09-29T03:48:49.986Z",
+        "id": "6327dd778f7ac7a17d19e0bd"
+      },
+      {
+        "name": "index.html",
+        "content": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.js\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/addons/p5.sound.min.js\"></script>\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">\n    <meta charset=\"utf-8\" />\n\n  </head>\n  <body>\n    <main>\n    </main>\n    <script src=\"sketch.js\"></script>\n  </body>\n</html>\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "6327dd778f7ac7a17d19e0be",
+        "createdAt": "2022-09-29T03:48:49.986Z",
+        "updatedAt": "2022-09-29T03:48:49.986Z",
+        "isSelectedFile": false,
+        "id": "6327dd778f7ac7a17d19e0be"
+      },
+      {
+        "name": "style.css",
+        "content": "html, body {\n  margin: 0;\n  padding: 0;\n}\ncanvas {\n  display: block;\n}\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "6327dd778f7ac7a17d19e0bf",
+        "createdAt": "2022-09-29T03:48:49.986Z",
+        "updatedAt": "2022-09-29T03:48:49.986Z",
+        "isSelectedFile": false,
+        "id": "6327dd778f7ac7a17d19e0bf"
+      }
+    ],
+    "createdAt": "2022-09-19T03:27:21.216Z",
+    "id": "ctwhPZYf-"
+  },
+  {
+    "_id": "AkGRwWsMZ",
+    "name": "Nebulous ketch",
+    "updatedAt": "2022-12-11T13:12:43.665Z",
+    "files": [
+      {
+        "name": "root",
+        "content": "",
+        "children": [
+          "638a19fc470bda792c6b55b7",
+          "638a19fc470bda792c6b55b6",
+          "638a19fc470bda792c6b55b8"
+        ],
+        "fileType": "folder",
+        "_id": "638a19fc470bda792c6b55b9",
+        "createdAt": "2022-12-11T13:12:43.665Z",
+        "updatedAt": "2022-12-11T13:12:43.665Z",
+        "id": "638a19fc470bda792c6b55b9"
+      },
+      {
+        "name": "sketch.js",
+        "content": "function setup() {\n  createCanvas(400, 400);\n}\n\nfunction draw() {\n  background(220);\n  drawEmoji();\n}\n\nfunction drawEmoji(){\n  push();\n  translate(width/2,height/2);\n  strokeWeight(4);\n  stroke(0)\n  textFont('menlo');\n  textSize(64);\n  textAlign(CENTER);\n  text('Day 5', 0,0);\n  noStroke(0);\n  textSize(16);\n  text(\"You should take better care\", 0, 60);\n      text(\"of your self!\", 0, 80);\n  pop();\n}",
+        "children": [],
+        "fileType": "file",
+        "_id": "638a19fc470bda792c6b55b6",
+        "isSelectedFile": true,
+        "createdAt": "2022-12-11T13:12:43.665Z",
+        "updatedAt": "2022-12-11T13:12:43.665Z",
+        "id": "638a19fc470bda792c6b55b6"
+      },
+      {
+        "name": "index.html",
+        "content": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/addons/p5.sound.min.js\"></script>\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">\n    <meta charset=\"utf-8\" />\n\n  </head>\n  <body>\n    <main>\n    </main>\n    <script src=\"sketch.js\"></script>\n  </body>\n</html>\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "638a19fc470bda792c6b55b7",
+        "createdAt": "2022-12-11T13:12:43.665Z",
+        "updatedAt": "2022-12-11T13:12:43.665Z",
+        "id": "638a19fc470bda792c6b55b7"
+      },
+      {
+        "name": "style.css",
+        "content": "html, body {\n  margin: 0;\n  padding: 0;\n}\ncanvas {\n  display: block;\n}\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "638a19fc470bda792c6b55b8",
+        "createdAt": "2022-12-11T13:12:43.665Z",
+        "updatedAt": "2022-12-11T13:12:43.665Z",
+        "id": "638a19fc470bda792c6b55b8"
+      }
+    ],
+    "createdAt": "2022-12-02T15:30:26.286Z",
+    "id": "AkGRwWsMZ"
+  },
+  {
+    "_id": "1LLwfvqbr",
+    "name": "PATTERN",
+    "updatedAt": "2024-09-19T18:52:20.437Z",
+    "files": [
+      {
+        "name": "root",
+        "content": "",
+        "children": [
+          "633f9ac19225f02e0670dfe4",
+          "633f9ac19225f02e0670dfe3",
+          "633f9ac19225f02e0670dfe5"
+        ],
+        "fileType": "folder",
+        "isSelectedFile": false,
+        "_id": "633f9ac19225f02e0670dfe6",
+        "createdAt": "2024-09-19T18:52:20.437Z",
+        "updatedAt": "2024-09-19T18:52:20.437Z",
+        "id": "633f9ac19225f02e0670dfe6"
+      },
+      {
+        "name": "sketch.js",
+        "content": "function setup() {\n  createCanvas(400, 400);\n  background(255);\n  noStroke();\n  fill(0);\n  let r1 = random(-1,1)\n  let r2 = random(-1,1)\n  let r3 = random(-1,1)\n  let r4 = random(-1,1)\n  for (let n = 0; n <= 50; n += 1) {\n    let ang2 = map(n, 0, 50, 0, 2 * PI);\n    for (let i = 0; i <= 100; i += 1) {\n      let ang1 = map(i, 0, 100, 0, 2 * PI);\n          console.log(ang1)\n\n      circle(\n        (sin(ang1*r1) * 150 *((cos(ang2*r2))) + width / 2),\n        (cos(ang1*r3) * 150 *((sin(ang2*r4))) + height / 2),\n        3*abs(sin(ang2))\n      );\n    }\n  }\n}\n",
+        "children": [],
+        "fileType": "file",
+        "isSelectedFile": true,
+        "_id": "633f9ac19225f02e0670dfe3",
+        "createdAt": "2024-09-19T18:52:20.437Z",
+        "updatedAt": "2024-09-19T18:52:20.437Z",
+        "id": "633f9ac19225f02e0670dfe3"
+      },
+      {
+        "name": "index.html",
+        "content": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.js\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/addons/p5.sound.min.js\"></script>\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">\n    <meta charset=\"utf-8\" />\n\n  </head>\n  <body>\n    <main>\n    </main>\n    <script src=\"sketch.js\"></script>\n  </body>\n</html>\n",
+        "children": [],
+        "fileType": "file",
+        "isSelectedFile": false,
+        "_id": "633f9ac19225f02e0670dfe4",
+        "createdAt": "2024-09-19T18:52:20.437Z",
+        "updatedAt": "2024-09-19T18:52:20.437Z",
+        "id": "633f9ac19225f02e0670dfe4"
+      },
+      {
+        "name": "style.css",
+        "content": "html, body {\n  margin: 0;\n  padding: 0;\n}\ncanvas {\n  display: block;\n}\n",
+        "children": [],
+        "fileType": "file",
+        "isSelectedFile": false,
+        "_id": "633f9ac19225f02e0670dfe5",
+        "createdAt": "2024-09-19T18:52:20.437Z",
+        "updatedAt": "2024-09-19T18:52:20.437Z",
+        "id": "633f9ac19225f02e0670dfe5"
+      }
+    ],
+    "createdAt": "2022-10-07T03:20:47.366Z",
+    "id": "1LLwfvqbr"
+  },
+  {
+    "_id": "wE-Zv3D7p",
+    "name": "test 1",
+    "updatedAt": "2022-09-20T03:58:37.293Z",
+    "files": [
+      {
+        "name": "root",
+        "content": "",
+        "children": [
+          "6329397da702bc856dcb241b",
+          "6329397da702bc856dcb241a",
+          "6329397da702bc856dcb241c"
+        ],
+        "fileType": "folder",
+        "_id": "6329397da702bc856dcb241d",
+        "createdAt": "2022-09-20T03:58:37.293Z",
+        "updatedAt": "2022-09-20T03:58:37.293Z",
+        "id": "6329397da702bc856dcb241d"
+      },
+      {
+        "name": "sketch.js",
+        "content": "function setup() {\n  createCanvas(400, 400);\n}\n\nfunction draw() {\n  background(220);\n  console.log(\"Hello, World!\")\n}",
+        "children": [],
+        "fileType": "file",
+        "_id": "6329397da702bc856dcb241a",
+        "isSelectedFile": true,
+        "createdAt": "2022-09-20T03:58:37.293Z",
+        "updatedAt": "2022-09-20T03:58:37.293Z",
+        "id": "6329397da702bc856dcb241a"
+      },
+      {
+        "name": "index.html",
+        "content": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.js\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/addons/p5.sound.min.js\"></script>\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">\n    <meta charset=\"utf-8\" />\n\n  </head>\n  <body>\n    <main>\n    </main>\n    <script src=\"sketch.js\"></script>\n  </body>\n</html>\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "6329397da702bc856dcb241b",
+        "createdAt": "2022-09-20T03:58:37.293Z",
+        "updatedAt": "2022-09-20T03:58:37.293Z",
+        "id": "6329397da702bc856dcb241b"
+      },
+      {
+        "name": "style.css",
+        "content": "html, body {\n  margin: 0;\n  padding: 0;\n}\ncanvas {\n  display: block;\n}\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "6329397da702bc856dcb241c",
+        "createdAt": "2022-09-20T03:58:37.293Z",
+        "updatedAt": "2022-09-20T03:58:37.293Z",
+        "id": "6329397da702bc856dcb241c"
+      }
+    ],
+    "createdAt": "2022-09-20T03:54:46.196Z",
+    "id": "wE-Zv3D7p"
+  },
+  {
+    "_id": "-MuhoyDUG",
+    "name": "Tremendous sprite",
+    "updatedAt": "2022-09-22T04:05:33.514Z",
+    "files": [
+      {
+        "name": "root",
+        "content": "",
+        "children": [
+          "632bdb78a231238cf361e55e",
+          "632bdb78a231238cf361e55d",
+          "632bdb78a231238cf361e55f"
+        ],
+        "fileType": "folder",
+        "_id": "632bdb78a231238cf361e560",
+        "createdAt": "2022-09-22T04:05:33.514Z",
+        "updatedAt": "2022-09-22T04:05:33.514Z",
+        "isSelectedFile": false,
+        "id": "632bdb78a231238cf361e560"
+      },
+      {
+        "name": "sketch.js",
+        "content": "let isPressed = false;\n\nlet newRect = () => {\n  if (isPressed){\n    fill(255,255,51)\n  }else{\n    fill(0)\n  }\n  rect(50,50,50,50);\n  this.mousePressed = ()=>{\n    isPressed = !isPressed;\n  }\n}\n\nfunction setup() {\n  createCanvas(400, 400);\n  rectMode(CENTER);\n}\n\nfunction draw() {\n  background(220);\n  newRect();\n}",
+        "children": [],
+        "fileType": "file",
+        "_id": "632bdb78a231238cf361e55d",
+        "isSelectedFile": true,
+        "createdAt": "2022-09-22T04:05:33.514Z",
+        "updatedAt": "2022-09-22T04:05:33.514Z",
+        "id": "632bdb78a231238cf361e55d"
+      },
+      {
+        "name": "index.html",
+        "content": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.js\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/addons/p5.sound.min.js\"></script>\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">\n    <meta charset=\"utf-8\" />\n\n  </head>\n  <body>\n    <main>\n    </main>\n    <script src=\"sketch.js\"></script>\n  </body>\n</html>\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "632bdb78a231238cf361e55e",
+        "createdAt": "2022-09-22T04:05:33.514Z",
+        "updatedAt": "2022-09-22T04:05:33.514Z",
+        "isSelectedFile": false,
+        "id": "632bdb78a231238cf361e55e"
+      },
+      {
+        "name": "style.css",
+        "content": "html, body {\n  margin: 0;\n  padding: 0;\n}\ncanvas {\n  display: block;\n}\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "632bdb78a231238cf361e55f",
+        "createdAt": "2022-09-22T04:05:33.514Z",
+        "updatedAt": "2022-09-22T04:05:33.514Z",
+        "isSelectedFile": false,
+        "id": "632bdb78a231238cf361e55f"
+      }
+    ],
+    "createdAt": "2022-09-22T03:51:07.413Z",
+    "id": "-MuhoyDUG"
+  },
+  {
+    "_id": "JRvB2spep",
+    "name": "Verdant eyebrow",
+    "updatedAt": "2022-09-13T04:29:40.866Z",
+    "files": [
+      {
+        "name": "root",
+        "content": "",
+        "children": [
+          "6320071d7dc34c2b410929df",
+          "6320071d7dc34c2b410929de",
+          "6320071d7dc34c2b410929e0"
+        ],
+        "fileType": "folder",
+        "_id": "6320071d7dc34c2b410929e1",
+        "createdAt": "2022-09-13T04:29:40.865Z",
+        "updatedAt": "2022-09-13T04:29:40.865Z",
+        "id": "6320071d7dc34c2b410929e1"
+      },
+      {
+        "name": "sketch.js",
+        "content": "function setup() {\n  createCanvas(400, 400);\n}\n\nfunction draw() {\n  background(220);\n  arc(50, 55, 50, 50, 0, HALF_PI);\n}",
+        "children": [],
+        "fileType": "file",
+        "_id": "6320071d7dc34c2b410929de",
+        "isSelectedFile": true,
+        "createdAt": "2022-09-13T04:29:40.865Z",
+        "updatedAt": "2022-09-13T04:29:40.865Z",
+        "id": "6320071d7dc34c2b410929de"
+      },
+      {
+        "name": "index.html",
+        "content": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.js\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/addons/p5.sound.min.js\"></script>\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">\n    <meta charset=\"utf-8\" />\n\n  </head>\n  <body>\n    <main>\n    </main>\n    <script src=\"sketch.js\"></script>\n  </body>\n</html>\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "6320071d7dc34c2b410929df",
+        "createdAt": "2022-09-13T04:29:40.865Z",
+        "updatedAt": "2022-09-13T04:29:40.865Z",
+        "id": "6320071d7dc34c2b410929df"
+      },
+      {
+        "name": "style.css",
+        "content": "html, body {\n  margin: 0;\n  padding: 0;\n}\ncanvas {\n  display: block;\n}\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "6320071d7dc34c2b410929e0",
+        "createdAt": "2022-09-13T04:29:40.866Z",
+        "updatedAt": "2022-09-13T04:29:40.866Z",
+        "id": "6320071d7dc34c2b410929e0"
+      }
+    ],
+    "createdAt": "2022-09-13T04:29:40.866Z",
+    "id": "JRvB2spep"
+  }
+]
