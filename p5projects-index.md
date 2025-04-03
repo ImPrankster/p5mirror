@@ -1,5 +1,5 @@
 # ImPrankster p5projects
-[25 sketches 2025-03-20T13:01:51.403Z](./downloads/gen/sketches_recent.md)
+[26 sketches 2025-04-02T18:13:23.348Z](./downloads/gen/sketches_recent.md)
 
 - [7.2 Code Example 1.1 copy-UMQB5mcKQ](./p5projects/7.2%20Code%20Example%201.1%20copy-UMQB5mcKQ) [[p5js](https://editor.p5js.org/ImPrankster/sketches/UMQB5mcKQ)]
 - [Ajar spider-2KiNFXJxM](./p5projects/Ajar%20spider-2KiNFXJxM) [[p5js](https://editor.p5js.org/ImPrankster/sketches/2KiNFXJxM)]
@@ -24,5 +24,6 @@
 - [Verdant eyebrow-JRvB2spep](./p5projects/Verdant%20eyebrow-JRvB2spep) [[p5js](https://editor.p5js.org/ImPrankster/sketches/JRvB2spep)]
 - [bezier curve demo copy-xiZGcQxWM](./p5projects/bezier%20curve%20demo%20copy-xiZGcQxWM) [[p5js](https://editor.p5js.org/ImPrankster/sketches/xiZGcQxWM)]
 - [dancerTemplate\_v3 copy-IQ9Pxchii](./p5projects/dancerTemplate_v3%20copy-IQ9Pxchii) [[p5js](https://editor.p5js.org/ImPrankster/sketches/IQ9Pxchii)]
+- [ims-CONFETTI-OBkdVH\_tD](./p5projects/ims-CONFETTI-OBkdVH_tD) [[p5js](https://editor.p5js.org/ImPrankster/sketches/OBkdVH_tD)]
 - [ims1-leo-Aw1U2NtB1](./p5projects/ims1-leo-Aw1U2NtB1) [[p5js](https://editor.p5js.org/ImPrankster/sketches/Aw1U2NtB1)]
 - [test 1-wE-Zv3D7p](./p5projects/test%201-wE-Zv3D7p) [[p5js](https://editor.p5js.org/ImPrankster/sketches/wE-Zv3D7p)]

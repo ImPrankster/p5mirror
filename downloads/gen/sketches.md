@@ -1,5 +1,5 @@
 # Sketches for ImPrankster
-25 sketches  
+26 sketches  
 [7.2 Code Example 1.1 copy](https://editor.p5js.org/ImPrankster/sketches/UMQB5mcKQ)<!-- 2022-10-27T03:41:04.980Z -->  
 [Ajar spider](https://editor.p5js.org/ImPrankster/sketches/2KiNFXJxM)<!-- 2022-12-09T16:26:20.052Z -->  
 [Animation1](https://editor.p5js.org/ImPrankster/sketches/C8pH3wG2a)<!-- 2022-09-27T04:29:24.116Z -->  
@@ -16,6 +16,7 @@
 [GIF Capture template F22 copy](https://editor.p5js.org/ImPrankster/sketches/Zk-UnKnu2)<!-- 2022-10-04T02:45:07.798Z -->  
 [Heliotrope lupin](https://editor.p5js.org/ImPrankster/sketches/r41Bi8Mm4)<!-- 2022-09-22T03:44:43.480Z -->  
 [Imaginary Creatures](https://editor.p5js.org/ImPrankster/sketches/R-Ysx25ft)<!-- 2022-10-16T05:23:52.547Z -->  
+[ims-CONFETTI](https://editor.p5js.org/ImPrankster/sketches/OBkdVH_tD)<!-- 2025-04-02T18:13:23.348Z -->  
 [ims1-leo](https://editor.p5js.org/ImPrankster/sketches/Aw1U2NtB1)<!-- 2025-03-20T13:01:51.403Z -->  
 [Lacy seatbelt](https://editor.p5js.org/ImPrankster/sketches/Q1RcC6l1y)<!-- 2022-12-11T11:23:59.206Z -->  
 [LIFE](https://editor.p5js.org/ImPrankster/sketches/vxE7cGnh2)<!-- 2022-11-10T03:13:03.186Z -->  

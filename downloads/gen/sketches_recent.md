@@ -1,5 +1,6 @@
 # Sketches for ImPrankster
-25 sketches  
+26 sketches  
+[ims-CONFETTI](https://editor.p5js.org/ImPrankster/sketches/OBkdVH_tD)<!-- 2025-04-02T18:13:23.348Z -->  
 [ims1-leo](https://editor.p5js.org/ImPrankster/sketches/Aw1U2NtB1)<!-- 2025-03-20T13:01:51.403Z -->  
 [PATTERN](https://editor.p5js.org/ImPrankster/sketches/1LLwfvqbr)<!-- 2024-09-19T18:52:20.437Z -->  
 [Nebulous ketch](https://editor.p5js.org/ImPrankster/sketches/AkGRwWsMZ)<!-- 2022-12-11T13:12:43.665Z -->  

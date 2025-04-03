@@ -921,6 +921,60 @@
     "id": "R-Ysx25ft"
   },
   {
+    "_id": "OBkdVH_tD",
+    "name": "ims-CONFETTI",
+    "files": [
+      {
+        "name": "root",
+        "content": "",
+        "children": [
+          "67ed7e2cddc693aadac59d31",
+          "67ed7e2cddc693aadac59d30",
+          "67ed7e2cddc693aadac59d32"
+        ],
+        "fileType": "folder",
+        "_id": "67ed7e2cddc693aadac59d33",
+        "createdAt": "2025-04-02T18:13:23.348Z",
+        "updatedAt": "2025-04-02T18:13:23.348Z",
+        "id": "67ed7e2cddc693aadac59d33"
+      },
+      {
+        "name": "sketch.js",
+        "content": "let confettiArr = [];\nlet pressTime = 0;\n\nlet fullScreenButton;\n// From\n// https://editor.p5js.org/jht1493/sketches/5LgILr8RF\n\nfunction setup_fullScreenButton() {\n  fullScreenButton = createButton(\"Full Screen\");\n  fullScreenButton.mousePressed(fullScreen_action);\n  fullScreenButton.style(\n    \"background-color: black; color: white; border: none; /* Remove default button styling */ padding: 10px 20px; /* Adjust padding as needed */ text-align: center; text-decoration: none; display: inline-block; font-size: 16px; /* Adjust font size as needed */ cursor: pointer; position: fixed; left: 0; bottom: 0;\"\n  );\n}\n\nfunction fullScreen_action() {\n  fullScreenButton.remove();\n  fullscreen(1);\n  let delay = 3000;\n  setTimeout(ui_present_window, delay);\n}\n\nfunction ui_present_window() {\n  resizeCanvas(windowWidth, windowHeight);\n  // init_dim();\n}\n\n// Respond to window resizing event\nfunction windowResized() {\n  resizeCanvas(windowWidth, windowHeight);\n}\n\nfunction setup() {\n  createCanvas(windowWidth, windowHeight);\n  setup_fullScreenButton();\n  colorMode(HSB);\n\n  for (let i = 0; i < random(150, 170); i++) {\n    confettiArr[i] = new confetti(random(width), random(height));\n  }\n}\n\nfunction draw() {\n  background(255);\n  for (let i = 0; i < confettiArr.length; i++) {\n    confettiArr[i].display();\n    confettiArr[i].move();\n    if (confettiArr[i].y > height) {\n      confettiArr[i] = new confetti(random(width), 0);\n    }\n  }\n}\n\nfunction mousePressed() {\n  //press mouse button to increase the density.\n  for (let i = 0; i < random(50, 70); i++) {\n    confettiArr.push(new confetti(random(width), random(height)));\n  }\n  //press 5 times resets the array\n  if (pressTime >= 5) {\n    let tempArr = [];\n    for (let i = 0; i < random(50, 70); i++) {\n      tempArr[i] = new confetti(random(width), random(height));\n    }\n    confettiArr = tempArr;\n    pressTime = 0;\n    return;\n  }\n  pressTime++;\n}\n\nclass confetti {\n  constructor(x, y) {\n    this.x = x;\n    this.y = y;\n    this.xSize = random(10, 20);\n    this.ySize = 0.7 * this.xSize;\n    this.hue = random(0, 255);\n    this.time = 0;\n    this.amp = random(5, 10);\n    this.angReset = random(0, 2 * PI); //each confetti start rotating at a different place.\n  }\n  display() {\n    push();\n    translate(this.x, this.y);\n    rotate(this.time + this.angReset);\n\n    noStroke();\n    fill(this.hue, 75, 75);\n\n    let cXSize = this.xSize * sin(this.time + this.angReset); //mimic confetti rotation\n    let cYSize = this.ySize * cos(this.time + this.angReset);\n\n    rect(-cXSize / 2, -cYSize / 2, cXSize, cYSize);\n    pop();\n    this.time += this.amp / 100;\n  }\n  move() {\n    this.y += this.amp / 2;\n    this.x += ((mouseX || windowWidth / 2) - windowWidth / 2) * 0.02;\n  }\n}\n",
+        "children": [],
+        "fileType": "file",
+        "isSelectedFile": true,
+        "_id": "67ed7e2cddc693aadac59d30",
+        "createdAt": "2025-04-02T18:13:23.348Z",
+        "updatedAt": "2025-04-02T18:13:23.348Z",
+        "id": "67ed7e2cddc693aadac59d30"
+      },
+      {
+        "name": "index.html",
+        "content": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.1/p5.js\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.1/addons/p5.sound.min.js\"></script>\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">\n    <meta charset=\"utf-8\" />\n\n  </head>\n  <body>\n    <main>\n    </main>\n    <script src=\"sketch.js\"></script>\n  </body>\n</html>\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "67ed7e2cddc693aadac59d31",
+        "createdAt": "2025-04-02T18:13:23.348Z",
+        "updatedAt": "2025-04-02T18:13:23.348Z",
+        "id": "67ed7e2cddc693aadac59d31"
+      },
+      {
+        "name": "style.css",
+        "content": "html, body {\n  margin: 0;\n  padding: 0;\n}\ncanvas {\n  display: block;\n}\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "67ed7e2cddc693aadac59d32",
+        "createdAt": "2025-04-02T18:13:23.348Z",
+        "updatedAt": "2025-04-02T18:13:23.348Z",
+        "id": "67ed7e2cddc693aadac59d32"
+      }
+    ],
+    "updatedAt": "2025-04-02T18:13:23.348Z",
+    "createdAt": "2025-04-02T18:13:04.337Z",
+    "id": "OBkdVH_tD"
+  },
+  {
     "_id": "Aw1U2NtB1",
     "name": "ims1-leo",
     "updatedAt": "2025-03-20T13:01:51.403Z",
